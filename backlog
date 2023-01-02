@@ -1,28 +1,63 @@
-Reconnaissance
--
-Resource Development
--
-Initial Access
--
-Execution
--
-Persistence
--
-Privilege Escalation
--
-Defense Evasion
--
-Credential Access
--
-Discovery
--
-Lateral Movement
--
-Collection
--
-Command and Control
--
-Exfiltration
--
-Impact
--
+Network Discovery and Mapping
+  Nmap
+  Masscan
+  Angry IP Scanner
+  ZMap
+  Shodan
+Vulnerability Management
+  OpenVAS
+  Nessus
+  Nexpose
+  Qualys
+  Lynis
+Security Monitoring
+  Sysmon
+  OSSEC
+  Suricata
+  Logstash
+  Splunk
+  ElastAlert
+Threat Intelligence
+  Maltego
+  MISP
+  ThreatConnect
+  ThreatCrowd
+  OTX AlienVault
+Incident Response Planning
+  (NIST) Cybersecurity Framework
+  Incident Response Plan
+  Business Continuity Plan
+  Ransomware Response Plan
+  Insider Threat Response Plan
+  Physical Security Plan
+Malware Detection and Analysis
+  IDA
+  Ghidra
+  YARA
+  VirusTotal
+  Volatility
+  Cuckoo Sandbox
+  Radare2
+  The Sleuth Kit (TSK)
+Data Recovery
+  TestDisk
+  Recuva
+  Extundelete
+Digital Forensics
+  SANS SIFT
+  Volatility
+  The Sleuth Kit
+  Autopsy
+Security Awareness Training
+  HackTheBox
+  TryHackMe
+  PhishMe
+  KnowBe4
+  Wombat Security
+  Imersivelabs
+Communication and Collaboration
+  Twitter
+  Facebook TheatExchange
+  ArcSight SIEM
+  LogRhythm SIEM
+  AlienVault USM SIEM
