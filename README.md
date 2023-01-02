@@ -21,7 +21,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 # Tool List
 
 <details open>
-    <summary><b>Reconnaissance</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Network Discovery and Mapping</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -30,7 +30,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Resource Development</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Vulnerability Management</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -39,7 +39,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Initial Access</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -48,7 +48,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Execution</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Threat Intelligence</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -57,7 +57,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Persistence</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Incident Response Planning</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -66,7 +66,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Privilege Escalation</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Malware Detection and Analysis</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -75,7 +75,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Defense Evasion</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Data Recovery</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -84,7 +84,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Credential Access</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Digital Forensics</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -93,7 +93,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Discovery</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Security Awareness Training</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -102,7 +102,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Lateral Movement</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Communication and Collaboration</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -110,44 +110,10 @@ Some of the tools may be specifically designed for blue teaming, while others ar
     </ul>
 </details>
 
-<details open>
-    <summary><b>Collection</b> $\textcolor{gray}{\text{0 tools}}$</summary>
-    <ul>
-        <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
-        </ul>
-    </ul>
-</details>
-
-<details open>
-    <summary><b>Command and Control</b> $\textcolor{gray}{\text{0 tools}}$</summary>
-    <ul>
-        <ul>
-          <li><b><a href="#x">x</a></b><i> x</i></li>
-        </ul>
-    </ul>
-</details>
-
-<details open>
-    <summary><b>Exfiltration</b> $\textcolor{gray}{\text{0 tools}}$</summary>
-    <ul>
-        <ul>
-	          <li><b><a href="#x">x</a></b><i> x</i></li>
-        </ul>
-    </ul>
-</details>
-
-<details open>
-    <summary><b>Impact</b> $\textcolor{gray}{\text{0 tools}}$</summary>
-    <ul>
-        <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
-        </ul>
-    </ul>
-</details>
-
-Reconnaissance
+Network Discovery and Mapping
 ====================
+
+*Tools for scanning and mapping out the network, discovering devices and services, and identifying potential vulnerabilities.*
 
 ### [🔙](#tool-list)[]()
 
@@ -165,8 +131,10 @@ a
 
 ```
 
-Resource Development
+Vulnerability Management
 ====================
+
+*Tools for identifying, prioritizing, and mitigating vulnerabilities in the network and on individual devices.*
 
 ### [🔙](#tool-list)[]()
 
@@ -184,8 +152,10 @@ a
 
 ```
 
-Initial Access
+Security Monitoring
 ====================
+
+*Tools for collecting and analyzing security logs and other data sources to identify potential threats and anomalous activity.*
 
 ### [🔙](#tool-list)[]()
 
@@ -203,8 +173,10 @@ a
 
 ```
 
-Execution
+Threat Intelligence
 ====================
+
+*Tools for gathering and analyzing intelligence about current and emerging threats, and for generating alerts about potential threats.*
 
 ### [🔙](#tool-list)[]()
 
@@ -222,8 +194,10 @@ a
 
 ```
 
-Persistence
+Incident Response Planning
 ====================
+
+*Tools for creating and maintaining an incident response plan, including templates and best practices for responding to different types of incidents.*
 
 ### [🔙](#tool-list)[]()
 
@@ -241,8 +215,10 @@ a
 
 ```
 
-Privilege Escalation
+Malware Detection and Analysis
 ====================
+
+*Tools for detecting and analyzing malware, including antivirus software and forensic analysis tools.*
 
 ### [🔙](#tool-list)[]()
 
@@ -260,8 +236,10 @@ a
 
 ```
 
-Defense Evasion
+Data Recovery
 ====================
+
+*Tools for recovering data from damaged or corrupted systems and devices.*
 
 ### [🔙](#tool-list)[]()
 
@@ -279,8 +257,10 @@ a
 
 ```
 
-Credential Access
+Digital Forensics
 ====================
+
+*Tools for conducting forensic investigations of digital devices and systems, including tools for collecting and analyzing evidence.*
 
 ### [🔙](#tool-list)[]()
 
@@ -298,8 +278,10 @@ a
 
 ```
 
-Discovery
+Security Awareness Training
 ====================
+
+*Tools for training employees and other users on how to recognize and prevent potential security threats.*
 
 ### [🔙](#tool-list)[]()
 
@@ -317,84 +299,10 @@ a
 
 ```
 
-Lateral Movement
+Communication and Collaboration
 ====================
 
-### [🔙](#tool-list)[]()
-
-a
-
-**Install:** 
-
-```bash
-
-```
-
-**Usage:** 
-
-```bash
-
-```
-
-Collection
-====================
-
-### [🔙](#tool-list)[]()
-
-a
-
-**Install:** 
-
-```bash
-
-```
-
-**Usage:** 
-
-```bash
-
-```
-
-Command and Control
-====================
-
-### [🔙](#tool-list)[]()
-
-a
-
-**Install:** 
-
-```bash
-
-```
-
-**Usage:** 
-
-```bash
-
-```
-
-Exfiltration
-====================
-
-### [🔙](#tool-list)[]()
-
-a
-
-**Install:** 
-
-```bash
-
-```
-
-**Usage:** 
-
-```bash
-
-```
-
-Impact
-====================
+Tools for coordinating and communicating with team members during an incident, including chat, email, and project management software.
 
 ### [🔙](#tool-list)[]()
 
