@@ -35,10 +35,12 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Vulnerability Management</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Vulnerability Management</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#openvas">OpenVAS</a></b><i> Open-source vulnerability scanner</i></li>
+            <li><b><a href="#nessus-essentials">Nessus Essentials</a></b><i> Vulnerability scanner</i></li>
+            <li><b><a href="#nexpose">Nexpose</a></b><i> Vulnerability management tool</i></li>
         </ul>
     </ul>
 </details>
@@ -309,21 +311,88 @@ Vulnerability Management
 
 *Tools for identifying, prioritizing, and mitigating vulnerabilities in the network and on individual devices.*
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[OpenVAS](https://openvas.org/)
 
-a
+OpenVAS is an open-source vulnerability scanner that helps identify security vulnerabilities in software and networks.
 
-**Install:** 
+It is a tool that can be used to perform network security assessments and is often used to identify vulnerabilities in systems and applications so that they can be patched or mitigated. 
+
+OpenVAS is developed by the Greenbone Networks company and is available as a free and open-source software application.
+
+**Install: (Kali)** 
 
 ```bash
-
+apt-get update
+apt-get dist-upgrade
+apt-get install openvas
+openvas-setup
 ```
 
 **Usage:** 
 
 ```bash
-
+openvas-start
 ```
+
+Visit https://127.0.0.1:9392, accept the SSL certificate popup and login with admin credentials:
+
+- username:admin
+- password:(*Password in openvas-setup command output*)
+
+![image](https://user-images.githubusercontent.com/100603074/210452918-aa8d7be0-e557-4556-937c-334df02702dc.png)
+
+*Image used from https://www.kali.org/blog/openvas-vulnerability-scanning/*
+
+### [🔙](#tool-list)[Nessus Essentials](https://www.tenable.com/products/nessus/nessus-essentials)
+
+Nessus is a vulnerability scanner that helps identify and assess the vulnerabilities that exist within a network or computer system.
+
+It is a tool that is used to perform security assessments and can be used to identify vulnerabilities in systems and applications so that they can be patched or mitigated.
+
+Nessus is developed by Tenable, Inc. and is available in both free and paid versions: 
+
+- The free version, called Nessus Essentials, is available for personal use only and is limited in its capabilities compared to the paid version. 
+- The paid version, called Nessus Professional, is more fully featured and is intended for use in a professional setting.
+
+**Install:** 
+
+Register for a Nessus Essentials activation code [here](https://www.tenable.com/products/nessus/nessus-essentials) and download.
+
+Purchase Nessus Professional from [here](https://www.tenable.com/products/nessus/nessus-professional).
+
+**Usage:** 
+
+Extensive documentation can be found [here](https://docs.tenable.com/nessus/Content/GetStarted.htm).
+
+[Nessus Plugins Search](https://www.tenable.com/plugins/search)
+
+[Tenable Community](https://community.tenable.com/)
+
+![image](https://user-images.githubusercontent.com/100603074/210452954-6208f96a-d180-4c8d-9579-313613d2cbe2.png)
+
+*Image used from https://www.tenable.com*
+
+### [🔙](#tool-list)[Nexpose](https://www.rapid7.com/products/nexpose/)
+
+Nexpose is a vulnerability management tool developed by Rapid7. It is designed to help organizations identify and assess vulnerabilities in their systems and applications in order to mitigate risk and improve security.
+
+Nexpose can be used to scan networks, devices, and applications in order to identify vulnerabilities and provide recommendations for remediation.
+
+It also offers features such as asset discovery, risk prioritization, and integration with other tools in the Rapid7 vulnerability management platform.
+
+**Install:** 
+
+For detailed installation instructions see [here](https://docs.rapid7.com/nexpose/install/).
+
+**Usage:** 
+
+For full login information see [here](https://docs.rapid7.com/nexpose/log-in-and-activate).
+
+For usage and scan creation instructions see [here](https://docs.rapid7.com/nexpose/create-and-scan-a-site).
+
+![image](https://user-images.githubusercontent.com/100603074/210452992-cf9976ee-6b93-465d-bc1c-6e23cc387dba.png)
+
+*Image used from https://www.rapid7.com/products/nexpose/*
 
 Security Monitoring
 ====================
