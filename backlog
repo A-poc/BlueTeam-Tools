@@ -1,9 +1,5 @@
 Network Discovery and Mapping
-  Nmap
-  Masscan
-  Angry IP Scanner
-  ZMap
-  Shodan
+-
 Vulnerability Management
   OpenVAS
   Nessus
@@ -39,6 +35,7 @@ Malware Detection and Analysis
   Cuckoo Sandbox
   Radare2
   The Sleuth Kit (TSK)
+  dnSpy https://github.com/dnSpy/dnSpy
 Data Recovery
   TestDisk
   Recuva
