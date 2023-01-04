@@ -4,9 +4,6 @@ Vulnerability Management
   Qualys
   Lynis
 Security Monitoring
-  Sysmon
-  Kibana
-  Logstash
   Splunk
   ElastAlert
 Threat Tools and Techniques
