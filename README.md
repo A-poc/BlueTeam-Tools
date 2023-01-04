@@ -57,10 +57,12 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
+            <li><b><a href="#gtfobinsgithubio">gtfobins.github.io</a></b><i> Living Off The Land Linux Binaries</i></li>
+            <li><b><a href="#filesecio">filesec.io</a></b><i> Attacker file extensions</i></li>
         </ul>
     </ul>
 </details>
@@ -501,25 +503,79 @@ Threat Tools and Techniques
 
 *Tools for identifying and implementing detections against TTPs used by threat actors.*
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[lolbas-project.github.io](https://lolbas-project.github.io/)
 
-a
+Living off the land binaries (LOLBins) are legitimate Windows executables that can be used by threat actors to carry out malicious activities without raising suspicion. 
+
+Using LOLBins allows attackers to blend in with normal system activity and evade detection, making them a popular choice for malicious actors.
+
+The LOLBAS project is a MITRE mapped list of LOLBINS with commands, usage and detection information for defenders.
 
 **Install:** 
 
-```bash
-
-```
+Visit [https://lolbas-project.github.io/](https://lolbas-project.github.io/).
 
 **Usage:** 
 
-```bash
+Use the information for detection opportunities to harden your infrastructure against LOLBIN usage. 
 
-```
+Here are some project links to get started:
 
+- [Bitsadmin.exe](https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/)
+- [Certutil.exe](https://lolbas-project.github.io/lolbas/Binaries/Certutil/)
+- [Cscript.exe](https://lolbas-project.github.io/lolbas/Binaries/Cscript/)
 
+![image](https://user-images.githubusercontent.com/100603074/210625466-9ab87233-e822-4961-a68a-f863f56ef830.png)
 
-*Image used from *
+*Image used from https://lolbas-project.github.io/*
+
+### [🔙](#tool-list)[gtfobins.github.io](https://gtfobins.github.io/)
+
+GTFOBins (short for "Get The F* Out Binaries") is a collection of Unix binaries that can be used to escalate privileges, bypass restrictions, or execute arbitrary commands on a system.
+
+They can be used by threat actors to gain unauthorized access to systems and carry out malicious activities.
+
+The GTFOBins project is a list of Unix binaries with command and usage information for attackers. This information can be used to implement unix detections.
+
+**Install:** 
+
+Visit [https://gtfobins.github.io/](https://gtfobins.github.io/).
+
+**Usage:** 
+
+Here are some project links to get started:
+
+- [base64](https://gtfobins.github.io/gtfobins/base64/)
+- [curl](https://gtfobins.github.io/gtfobins/curl/)
+- [nano](https://gtfobins.github.io/gtfobins/nano/)
+
+![image](https://user-images.githubusercontent.com/100603074/210625527-6a037b81-e3fe-4282-a193-1cc4b9c06f75.png)
+
+*Image used from https://gtfobins.github.io/*
+
+### [🔙](#tool-list)[filesec.io](https://filesec.io/)
+
+Filesec is a list of file extensions that can be used by attackers for phishing, execution, macros etc.
+
+This is a nice resource to understand the malicious use cases of common file extentions and ways that you can defend against them.
+
+Each file extension page contains a description, related operating system and recommendations.
+
+**Install:** 
+
+Visit [https://filesec.io/](https://filesec.io/).
+
+**Usage:** 
+
+Here are some project links to get started:
+
+- [.Docm](https://filesec.io/docm)
+- [.Iso](https://filesec.io/iso)
+- [.Ppam](https://filesec.io/ppam)
+
+![image](https://user-images.githubusercontent.com/100603074/210625626-58223992-2821-42c6-878a-e6aea4b9a508.png)
+
+*Image used from https://filesec.io/*
 
 Threat Intelligence
 ====================
