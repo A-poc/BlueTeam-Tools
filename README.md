@@ -4,9 +4,11 @@
 <img src="https://user-images.githubusercontent.com/100603074/210630295-7b06d894-cea8-4ed7-9bd2-816b0d98d968.png" height="370">
 </p>
 
-This github repository contains a collection of **20+** **tools** and **resources** that can be useful for **blue teaming** and **incident response activities**. 
+This github repository contains a collection of **35+** **tools** and **resources** that can be useful for **blue teaming** and **incident response activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
+
+> 🔗 If you are a Red Teamer, check out [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools)
 
 > **Warning** 
 > 
@@ -101,37 +103,44 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Data Recovery</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Data Recovery</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#recuva">Recuva</a></b><i> File recovery</i></li>
+            <li><b><a href="#extundelete">Extundelete</a></b><i> Ext3 or ext4 partition recovery</i></li>
+            <li><b><a href="#testdisk">TestDisk</a></b><i> Data Recovery</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Digital Forensics</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Digital Forensics</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#sans-sift">SANS SIFT</a></b><i> Forensic toolkit</i></li>
+            <li><b><a href="#the-sleuth-kit">The Sleuth Kit</a></b><i> Disk images analysis tools</i></li>
+            <li><b><a href="#autopsy">Autopsy</a></b><i> Digital forensics platform</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Security Awareness Training</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Security Awareness Training</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#tryhackme">TryHackMe</a></b><i> Cyber security challenges platform</i></li>
+            <li><b><a href="#hackthebox">HackTheBox</a></b><i> Cyber security challenges platform</i></li>
+            <li><b><a href="#phishme">PhishMe</a></b><i> Phishing training</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Communication and Collaboration</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Communication and Collaboration</b> $\textcolor{gray}{\text{2 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#twitter">Twitter</a></b><i> Cyber Security Accounts</i></li>
+            <li><b><a href="#facebook-theatexchange">Facebook TheatExchange</a></b><i> Malicious indicators sharing platform</i></li>
         </ul>
     </ul>
 </details>
@@ -517,8 +526,6 @@ Using LOLBins allows attackers to blend in with normal system activity and evade
 
 The LOLBAS project is a MITRE mapped list of LOLBINS with commands, usage and detection information for defenders.
 
-**Install:** 
-
 Visit [https://lolbas-project.github.io/](https://lolbas-project.github.io/).
 
 **Usage:** 
@@ -543,8 +550,6 @@ They can be used by threat actors to gain unauthorized access to systems and car
 
 The GTFOBins project is a list of Unix binaries with command and usage information for attackers. This information can be used to implement unix detections.
 
-**Install:** 
-
 Visit [https://gtfobins.github.io/](https://gtfobins.github.io/).
 
 **Usage:** 
@@ -566,8 +571,6 @@ Filesec is a list of file extensions that can be used by attackers for phishing,
 This is a nice resource to understand the malicious use cases of common file extentions and ways that you can defend against them.
 
 Each file extension page contains a description, related operating system and recommendations.
-
-**Install:** 
 
 Visit [https://filesec.io/](https://filesec.io/).
 
@@ -761,8 +764,6 @@ When a file, URL, or software is submitted to VirusTotal, the tool uses various 
 
 VirusTotal can also be used to check the reputation of a file or URL, and to monitor for malicious activity on a network.
 
-**Install:** 
-
 Visit [https://www.virustotal.com/gui/home/search](https://www.virustotal.com/gui/home/search)
 
 **Usage:** 
@@ -856,92 +857,291 @@ Data Recovery
 
 *Tools for recovering data from damaged or corrupted systems and devices.*
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[Recuva](https://www.ccleaner.com/recuva)
 
-a
+Recuva is a data recovery tool that can be used to recover deleted files from your computer. 
+
+It is often used to recover deleted files that may contain valuable information, such as deleted logs or documents that could be used to investigate a security incident. 
+
+Recuva can recover files from hard drives, USB drives, and memory cards, and it is available for Windows and Mac operating systems.
 
 **Install:** 
 
-```bash
+You can download the tool from [here](https://www.ccleaner.com/recuva).
 
-```
+**Usage:** 
+
+Nice step by step [guide](https://toolbox.iskysoft.com/data-recovery-tips/recuva-windows-10.html).
+
+![image](https://user-images.githubusercontent.com/100603074/210668891-58312f55-d4d0-4f77-9cd6-f716bbdb5b44.png)
+
+*Image used from https://www.softpedia.com/blog/recuva-explained-usage-video-and-download-503681.shtml*
+
+### [🔙](#tool-list)[Extundelete](https://extundelete.sourceforge.net/)
+
+Extundelete is a utility that can be used to recover deleted files from an ext3 or ext4 file system. 
+
+It works by searching the file system for blocks of data that used to belong to a file, and then attempting to recreate the file using those blocks of data. It is often used to recover important files that have been accidentally or maliciously deleted. 
+
+**Install:** 
+
+You can download the tool from [here](https://sourceforge.net/project/platformdownload.php?group_id=260221).
 
 **Usage:** 
 
 ```bash
+# Prints information about the filesystem from the superblock.
+--superblock
 
+# Attemps to restore the file which was deleted at the given filename, called as "--restore-file dirname/filename".
+--restore-file path/to/deleted/file
+
+# Restores all files possible to undelete to their names before deletion, when possible. Other files are restored to a filename like "file.NNNN".
+--restore-all
 ```
 
-*Image used from *
+Full usage information can be found [here](https://extundelete.sourceforge.net/options.html).
+
+![image](https://user-images.githubusercontent.com/100603074/210669234-0d2d4920-7856-4731-b81c-3d7132f752ad.png)
+
+*Image used from https://theevilbit.blogspot.com/2013/01/backtrack-forensics-ext34-file-recovery.html*
+
+### [🔙](#tool-list)[TestDisk](https://www.cgsecurity.org/wiki/TestDisk_Download)
+
+TestDisk is a free and open-source data recovery software tool that is designed to help recover lost partitions and make non-booting disks bootable again. It is useful for both computer forensics and data recovery. 
+
+It can be used to recover data that has been lost due to a variety of reasons, such as accidental deletion, formatting, or corruption of the partition table. 
+
+TestDisk can also be used to repair damaged boot sectors, recover deleted partitions, and recover lost files. It supports a wide range of file systems, including FAT, NTFS, and ext2/3/4, and can be used to recover data from disks that are damaged or formatted with a different file system than the one they were originally created with.
+
+**Install:** 
+
+You can download the tool from [here](https://www.cgsecurity.org/wiki/TestDisk_Download).
+
+**Usage:** 
+
+Full usage examples [here](https://www.cgsecurity.org/wiki/Data_Recovery_Examples).
+
+[Step by step guide](https://www.cgsecurity.org/wiki/TestDisk_Step_By_Step)
+
+[TestDisk Documentation PDF - 60 Pages](https://www.cgsecurity.org/testdisk.pdf)
+
+![image](https://user-images.githubusercontent.com/100603074/210668956-4ed75998-bd6d-48cf-a2e7-dfa75656eece.png)
+
+*Image used from https://www.cgsecurity.org/wiki/*
 
 Digital Forensics
 ====================
 
 *Tools for conducting forensic investigations of digital devices and systems, including tools for collecting and analyzing evidence.*
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[SANS SIFT](https://www.sans.org/tools/sift-workstation/)
 
-a
+SANS SIFT (SANS Investigative Forensic Toolkit) is a powerful toolkit for forensic analysis and incident response. 
+
+It is a collection of open source and commercial tools that can be used to perform forensic analysis on a wide range of systems, including Windows, Linux, and Mac OS X. The SANS SIFT kit is designed to be run on a forensic workstation, which is a specialized computer that is used to perform forensic analysis on digital evidence.
+
+The SANS SIFT kit is particularly useful for blue teamers, as it provides a wide range of tools and resources that can be used to investigate incidents, respond to threats, and perform forensic analysis on compromised systems.
 
 **Install:** 
 
-```bash
+1. Visit [https://www.sans.org/tools/sift-workstation/](https://www.sans.org/tools/sift-workstation/).
+
+2. Click the 'Login to Download' button and input (or create) your SANS Portal account credentials to download the virtual machine. 
+
+3. Once you have booted the virtual machine, use the credentials below to gain access.
 
 ```
+Login = sansforensics
+Password = forensics
+```
+
+**Note:** *Use to elevate privileges to root while mounting disk images.*
+
+Additional install options [here](https://www.sans.org/tools/sift-workstation/).
 
 **Usage:** 
 
 ```bash
+# Registry Parsing - Regripper
+rip.pl -r <HIVEFILE> -f <HIVETYPE>
 
+# Recover deleted registry keys
+deleted.pl <HIVEFILE>
+
+# Mount E01 Images
+ewfmount image.E01 mountpoint
+mount -o
+
+# Stream Extraction
+bulk_extractor <options> -o output_dir
 ```
 
+Full usage guide [here](https://www.sans.org/posters/sift-cheat-sheet/).
 
-*Image used from *
+![image](https://user-images.githubusercontent.com/100603074/210668984-bdec731b-ce80-4c3b-9696-9431dd77f9b0.png)
+
+*Image used from https://securityboulevard.com/2020/08/how-to-install-sift-workstation-and-remnux-on-the-same-system-for-forensics-and-malware-analysis/*
+
+### [🔙](#tool-list)[The Sleuth Kit](https://sleuthkit.org/sleuthkit/)
+
+The Sleuth Kit is a collection of command line tools that can be used to analyze disk images and recover files from them. 
+
+It is primarily used by forensic investigators to examine digital evidence after a computer has been seized or an image of a disk has been made. It can be useful because it can help understand what happened during a security incident and identify any malicious activity. 
+
+The tools in The Sleuth Kit can be used to extract deleted files, analyze disk partition structures, and examine the file system for evidence of tampering or unusual activity.
+
+**Install:** 
+
+Download tool from [here](https://sleuthkit.org/sleuthkit/download.php).
+
+**Usage:** 
+
+Link to [documentation](https://sleuthkit.org/sleuthkit/docs.php).
+
+![image](https://user-images.githubusercontent.com/100603074/210669006-6dfab59d-b50e-49db-b390-b9ef27cab6fe.png)
+
+*Image used from http://www.effecthacking.com/2016/09/the-sleuth-kit-digital-forensic-tool.html*
+
+### [🔙](#tool-list)[Autopsy](https://www.autopsy.com/)
+
+Autopsy is a digital forensics platform and graphical interface to The Sleuth Kit and other digital forensics tools.
+
+It is used by law enforcement, military, and corporate examiners to investigate what happened on a computer. You can use it to analyze disk images and recover files, as well as to identify system and user activity. 
+
+Autopsy is used by "blue teams" (the cybersecurity professionals who defend organizations against attacks) to conduct forensic analysis and incident response. It can help blue teams understand the nature and scope of an attack, and identify any malicious activity that may have occurred on a computer or network.
+
+**Install:** 
+
+Download the tool from [here](https://www.autopsy.com/download/).
+
+**Usage:** 
+
+[Autopsy User Guide](http://sleuthkit.org/autopsy/docs/user-docs/4.19.3//)
+
+[SANS - Introduction to using the AUTOPSY Forensic Browser](https://www.sans.org/blog/a-step-by-step-introduction-to-using-the-autopsy-forensic-browser/)
+
+![image](https://user-images.githubusercontent.com/100603074/210669037-449e7790-85c8-4b8c-97b9-2b46a1ea6e61.png)
+
+*Image used from https://www.kitploit.com/2014/01/autopsy-digital-investigation-analysis.html*
 
 Security Awareness Training
 ====================
 
 *Tools for training employees and other users on how to recognize and prevent potential security threats.*
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[TryHackMe](https://tryhackme.com/dashboard)
 
-a
+TryHackMe is a platform that offers a variety of virtual machines, known as "rooms," which are designed to teach cybersecurity concepts and skills through hands-on learning. 
 
-**Install:** 
+These rooms are interactive and gamified, allowing users to learn about topics such as web vulnerabilities, network security, and cryptography by solving challenges and completing tasks. 
 
-```bash
+The platform is often used for security awareness training, as it provides a safe and controlled environment for users to practice their skills and learn about different types of cyber threats and how to defend against them.
 
-```
+Visit [https://tryhackme.com/](https://tryhackme.com/) and create an account.
 
-**Usage:** 
+[TryHackMe - Getting Started Guide](https://docs.tryhackme.com/docs/teaching/teaching-getting-started/)
 
-```bash
+**Useful links:** 
 
-```
+[Pre-Security Learning Path](https://tryhackme.com/path-action/presecurity/join)
 
+[introduction to Cyber Security Learning Path](https://tryhackme.com/path-action/introtocyber/join)
 
-*Image used from *
+Visit the [hacktivities](https://tryhackme.com/hacktivities) tab for a full list of available rooms and modules.
+
+![image](https://user-images.githubusercontent.com/100603074/210669062-dba079b7-a677-4b7a-ac99-6892ba894ac8.png)
+
+*Image used from https://www.hostingadvice.com/blog/learn-cybersecurity-with-tryhackme/*
+
+### [🔙](#tool-list)[HackTheBox](https://www.hackthebox.com/)
+
+HackTheBox is a platform for practicing and improving your hacking skills. 
+
+It consists of a set of challenges that simulate real-world scenarios and require you to use your knowledge of various hacking techniques to solve them. These challenges are designed to test your knowledge of topics such as network security, cryptography, web security, and more. 
+
+HackTheBox is often used by security professionals as a way to practice and improve their skills, and it can also be a useful resource for security awareness training. By working through the challenges and learning how to solve them, individuals can gain a better understanding of how to identify and mitigate common security threats.
+
+Visit [https://app.hackthebox.com/login](https://app.hackthebox.com/login) and create an account.
+
+**Useful links:** 
+
+[Blog - Introduction to Hack The Box](https://help.hackthebox.com/en/articles/5185158-introduction-to-hack-the-box)
+
+[Blog - Learn to Hack with Hack The Box: The Beginner's Bible](https://www.hackthebox.com/blog/learn-to-hack-beginners-bible)
+
+[Blog - Introduction to Starting Point](https://help.hackthebox.com/en/articles/6007919-introduction-to-starting-point)
+
+![image](https://user-images.githubusercontent.com/100603074/210669087-d00d76d1-300f-48c9-8f7f-4b9b5157626e.png)
+
+*Image used from https://www.hackthebox.com/login*
+
+### [🔙](#tool-list)[PhishMe](https://cofense.com/product-services/phishme/)
+
+PhishMe is a company that provides security awareness training to help organizations educate their employees about how to identify and prevent phishing attacks. 
+
+PhishMe's training programs aim to teach employees how to recognize and report phishing attempts, as well as how to protect their personal and professional accounts from these types of attacks. 
+
+The company's training programs can be customized to fit the needs of different organizations and can be delivered through a variety of mediums, including online courses, in-person training, and simulations.
+
+Request a demo from [here](https://go.cofense.com/live-demo/).
+
+**Useful links:** 
+
+[Cofense Blog](https://cofense.com/blog/)
+
+[Cofense Knowledge Center](https://cofense.com/knowledge-center-hub/)
+
+![image](https://user-images.githubusercontent.com/100603074/210669120-1b29007a-f7f6-40f6-922b-9b5b251f6447.png)
+
+*Image used from https://cofense.com/product-services/phishme/*
 
 Communication and Collaboration
 ====================
 
 Tools for coordinating and communicating with team members during an incident, including chat, email, and project management software.
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[Twitter](https://twitter.com/)
 
-a
+Twitter is a great platform for sharing information about cyber security. 
 
-**Install:** 
+It's a platform that is widely used by security professionals, researchers, and experts, giving you access to an endless amount of new information.
 
-```bash
+Some great accounts to follow:
 
-```
+- [@vxunderground](https://twitter.com/vxunderground)
+- [@Alh4zr3d](https://twitter.com/Alh4zr3d)
+- [@3xp0rtblog](https://twitter.com/3xp0rtblog)
+- [@C5pider](https://twitter.com/C5pider)
+- [@_JohnHammond](https://twitter.com/_JohnHammond)
+- [@mrd0x](https://twitter.com/mrd0x)
+- [@TheHackersNews](https://twitter.com/TheHackersNews)
+- [@pancak3stack](https://twitter.com/pancak3stack)
+- [@GossiTheDog](https://twitter.com/GossiTheDog)
+- [@briankrebs](https://twitter.com/briankrebs)
+- [@SwiftOnSecurity](https://twitter.com/SwiftOnSecurity)
+- [@schneierblog](https://twitter.com/schneierblog)
+- [@mikko](https://twitter.com/mikko)
+- [@campuscodi](https://twitter.com/campuscodi)
 
-**Usage:** 
+### [🔙](#tool-list)[Facebook TheatExchange](https://developers.facebook.com/docs/threat-exchange/getting-started)
 
-```bash
+Facebook ThreatExchange is a platform for security professionals to share and analyze information about cyber threats. 
 
-```
+It was designed to help organizations better defend against threats by allowing them to share threat intelligence with each other in a private and secure way. 
 
+It is intended to be used by "blue teams", who are responsible for the security of an organization and work to prevent, detect, and respond to cyber threats.
 
-*Image used from *
+**Usage:**
+
+To request access to ThreatExchange, you have to submit an application via [https://developers.facebook.com/products/threat-exchange/](https://developers.facebook.com/products/threat-exchange/).
+
+**Useful links:** 
+
+[Welcome to ThreatExchange!](https://developers.facebook.com/docs/threat-exchange/getting-started)
+
+[ThreatExchange UI Overview](https://developers.facebook.com/docs/threat-exchange/ui)
+
+[ThreatExchange API Reference](https://developers.facebook.com/docs/threat-exchange/reference/apis)
+
+[GitHub - ThreatExchange](https://github.com/facebook/ThreatExchange/tree/main/python-threatexchange)
