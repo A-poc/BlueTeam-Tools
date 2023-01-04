@@ -9,23 +9,14 @@ Security Monitoring
 Threat Tools and Techniques
   https://www.kqlsearch.com/
 Threat Intelligence
-  Maltego
-  MISP
-  ThreatConnect
   ThreatCrowd
   OTX AlienVault
 Incident Response Planning
-  (NIST) Cybersecurity Framework
-  Incident Response Plan
   Business Continuity Plan
-  Ransomware Response Plan
   Insider Threat Response Plan
   Physical Security Plan
 Malware Detection and Analysis
-  IDA
-  Ghidra
   YARA
-  VirusTotal
   Volatility
   Cuckoo Sandbox
   Radare2
