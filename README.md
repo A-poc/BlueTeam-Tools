@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/100603074/210630295-7b06d894-cea8-4ed7-9bd2-816b0d98d968.png" height="370">
 </p>
 
-This github repository contains a collection of **10+** **tools** and **resources** that can be useful for **blue teaming** and **incident response activities**. 
+This github repository contains a collection of **20+** **tools** and **resources** that can be useful for **blue teaming** and **incident response activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
 
@@ -68,28 +68,34 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Threat Intelligence</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Threat Intelligence</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#maltego">Maltego</a></b><i> Threat Intelligence Platform</i></li>
+            <li><b><a href="#misp">MISP</a></b><i> Malware Information Sharing Platform</i></li>
+            <li><b><a href="#threatconnect">ThreatConnect</a></b><i> Threat data aggregation</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Incident Response Planning</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Incident Response Planning</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#nist">NIST</a></b><i> Cybersecurity Framework</i></li>
+            <li><b><a href="#incident-response-plan">Incident Response Plan</a></b><i> Framework for incident response</i></li>
+            <li><b><a href="#ransomware-response-plan">Ransomware Response Plan</a></b><i> Framework for ransomware response</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Malware Detection and Analysis</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Malware Detection and Analysis</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#x">x</a></b><i> x</i></li>
+            <li><b><a href="#virustotal">VirusTotal</a></b><i> Malicious IOC Sharing Platform</i></li>
+            <li><b><a href="#ida">IDA</a></b><i> Malware disassembler and debugger</i></li>
+            <li><b><a href="#ghidra">Ghidra</a></b><i> Malware reverse engineering tool</i></li>
         </ul>
     </ul>
 </details>
@@ -582,63 +588,268 @@ Threat Intelligence
 
 *Tools for gathering and analyzing intelligence about current and emerging threats, and for generating alerts about potential threats.*
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[Maltego](https://www.maltego.com/solutions/cyber-threat-intelligence/)
 
-a
+Maltego is a commercial threat intelligence and forensics tool developed by Paterva. It is used by security professionals to gather and analyze information about domains, IP addresses, networks, and individuals in order to identify relationships and connections that might not be immediately apparent.
+
+Maltego uses a visual interface to represent data as entities, which can be linked together to form a network of relationships. It includes a range of transforms, which are scripts that can be used to gather data from various sources, such as social media, DNS records, and WHOIS data.
+
+Maltego is often used in conjunction with other security tools, such as SIEMs and vulnerability scanners, as part of a comprehensive threat intelligence and incident response strategy.
+
+You can schedule a demo [here](https://www.maltego.com/get-a-demo/).
+
+[Maltego handbook Handbook for Cyber Threat Intelligence](https://static.maltego.com/cdn/Handbooks/Maltego-Handbook-for-Cyber-Threat-Intelligence.pdf)
+
+![image](https://user-images.githubusercontent.com/100603074/210655712-e1409206-de1d-4601-88a5-f5a6ac3928c7.png)
+
+*Image used from https://www.maltego.com/reduce-your-cyber-security-risk-with-maltego/*
+
+### [🔙](#tool-list)[MISP](https://www.misp-project.org/)
+
+MISP (short for Malware Information Sharing Platform) is an open-source platform for sharing, storing, and correlating Indicators of Compromise (IOCs) of targeted attacks, threats, and malicious activity.
+
+MISP includes a range of features, such as real-time sharing of IOCs, support for multiple formats, and the ability to import and export data to and from other tools. 
+
+It also provides a RESTful API and various data models to facilitate the integration of MISP with other security systems. In addition to its use as a threat intelligence platform, MISP is also used for incident response, forensic analysis, and malware research.
 
 **Install:** 
 
 ```bash
+# Kali
+wget -O /tmp/misp-kali.sh https://raw.githubusercontent.com/MISP/MISP/2.4/INSTALL/INSTALL.sh && bash /tmp/misp-kali.sh
 
+# Ubuntu 20.04.2.0-server
+wget -O /tmp/INSTALL.sh https://raw.githubusercontent.com/MISP/MISP/2.4/INSTALL/INSTALL.sh
+bash /tmp/INSTALL.sh
 ```
+
+Full installation instructions can be found [here](https://misp.github.io/MISP/).
 
 **Usage:** 
 
-```bash
+MISP documentation can be found [here](https://www.misp-project.org/documentation/).
 
-```
+[MISP user guide](https://github.com/MISP/misp-book)
+
+[MISP Training Cheat sheet](https://www.misp-project.org/misp-training/cheatsheet.pdf)
+
+![image](https://user-images.githubusercontent.com/100603074/210655743-b7fd5ab0-a106-4277-815d-c674525a9a91.png)
+
+*Image used from http://www.concordia-h2020.eu/blog-post/integration-of-misp-into-flowmon-ads/*
+
+### [🔙](#tool-list)[ThreatConnect](https://threatconnect.com/threat-intelligence-platform/)
+
+ThreatConnect is a threat intelligence platform that helps organizations aggregate, analyze, and act on threat data. It is designed to provide a single, unified view of an organization's threat landscape and enable users to collaborate and share information about threats.
+
+The platform includes a range of features for collecting, analyzing, and disseminating threat intelligence, such as a customizable dashboard, integration with third-party data sources, and the ability to create custom reports and alerts.
+
+It is intended to help organizations improve their security posture by providing them with the information they need to identify, prioritize, and respond to potential threats.
+
+You can request a demo from [here](https://threatconnect.com/request-a-demo/).
+
+[ThreatConnect for Threat Intel Analysts - PDF](https://threatconnect.com/wp-content/uploads/2022/12/Intel-Analysts-Datasheet.pdf)
+
+![image](https://user-images.githubusercontent.com/100603074/210655770-4413ead0-6216-47fe-a933-cbe0be9f86a1.png)
+
+*Image used from https://threatconnect.com/threat-intelligence-platform/*
 
 Incident Response Planning
 ====================
 
 *Tools for creating and maintaining an incident response plan, including templates and best practices for responding to different types of incidents.*
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[NIST](https://www.nist.gov/cyberframework)
 
-a
+The NIST Cybersecurity Framework (CSF) is a framework developed by the National Institute of Standards and Technology (NIST) to help organizations manage cybersecurity risks. It provides a set of guidelines, best practices, and standards for implementing and maintaining a robust cybersecurity program.
 
-**Install:** 
+The framework is organized around five core functions: Identify, Protect, Detect, Respond, and Recover. These functions provide a structure for understanding and addressing the various components of cybersecurity risk.
 
-```bash
+The CSF is designed to be flexible and adaptable, and it can be customized to fit the specific needs and goals of an organization. It is intended to be used as a tool for improving an organization's cybersecurity posture and for helping organizations better understand and manage their cybersecurity risks.
 
-```
+**Useful Links:** 
 
-**Usage:** 
+[NIST Quickstart Guide](https://csrc.nist.gov/Projects/cybersecurity-framework/nist-cybersecurity-framework-a-quick-start-guide)
 
-```bash
+[Framework for Improving Critical Infrastructure Cybersecurity](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf)
 
-```
+[Data Breach Response: A Guide for Business](https://www.ftc.gov/business-guidance/resources/data-breach-response-guide-business)
+
+[NIST Events and Presentations](https://www.nist.gov/cyberframework/events-and-presentations)
+
+[Twitter - @NISTcyber](https://www.twitter.com/NISTcyber)
+
+![image](https://user-images.githubusercontent.com/100603074/210655795-f809707f-fb3e-4df9-b07d-c4fa0392f020.png)
+
+*Image used from https://www.dell.com/en-us/blog/strengthen-security-of-your-data-center-with-the-nist-cybersecurity-framework/*
+
+### [🔙](#tool-list)Incident Response Plan
+
+An incident response plan is a set of procedures that a company puts in place to manage and mitigate the impact of a security incident, such as a data breach or a cyber attack. 
+
+The theory behind an incident response plan is that it helps a company to be prepared for and respond effectively to a security incident, which can minimize the damage and reduce the chances of it happening again in the future.
+
+There are several reasons why businesses need an incident response plan:
+
+1. **To minimize the impact of a security incident:** An incident response plan helps a company to identify and address the source of a security incident as quickly as possible, which can help to minimize the damage and reduce the chances of it spreading.
+
+2. **To meet regulatory requirements:** Many industries have regulations that require companies to have an incident response plan in place. For example, the Payment Card Industry Data Security Standard (PCI DSS) requires merchants and other organizations that accept credit cards to have an incident response plan.
+
+3. **To protect reputation:** A security incident can damage a company's reputation, which can lead to a loss of customers and revenue. An incident response plan can help a company to manage the situation and minimize the damage to its reputation.
+
+4. **To reduce the cost of a security incident:** The cost of a security incident can be significant, including the cost of remediation, legal fees, and lost business. An incident response plan can help a company to minimize these costs by providing a roadmap for responding to the incident.
+
+**Useful Links:**
+
+[National Cyber Security Centre - Incident Response overview](https://www.ncsc.gov.uk/collection/incident-management/incident-response)
+
+[SANS - Security Policy Templates](https://www.sans.org/information-security-policy/)
+
+[SANS - Incident Handler's Handbook](https://www.sans.org/white-papers/33901/)
+
+[FRSecure - Incident Response Plan Template](https://frsecure.com/incident-response-plan-template/)
+
+[Cybersecurity and Infrastructure Security Agency - CYBER INCIDENT RESPONSE](https://www.cisa.gov/cyber-incident-response)
+
+[FBI - Incident Response Policy](https://www.fbi.gov/file-repository/incident-response-policy.pdf/view)
+
+![image](https://user-images.githubusercontent.com/100603074/210656422-d75791ae-797b-4135-bbd5-8b84335892ba.png)
+
+*Image used from https://www.ncsc.gov.uk/collection/incident-management/incident-response*
+
+### [🔙](#tool-list)Ransomware Response Plan
+
+Ransomware is a type of malicious software that encrypts a victim's files. The attackers then demand a ransom from the victim to restore access to the files; hence the name ransomware.
+
+The theory behind a ransomware response plan is that it helps a company to be prepared for and respond effectively to a ransomware attack, which can minimize the impact of the attack and reduce the chances of it happening again in the future.
+
+There are several reasons why businesses need a ransomware response plan:
+
+1. **To minimize the impact of a ransomware attack:** A ransomware response plan helps a company to identify and address a ransomware attack as quickly as possible, which can help to minimize the damage and reduce the chances of the ransomware spreading to other systems.
+
+2. **To protect against data loss:** Ransomware attacks can result in the loss of important data, which can be costly and disruptive for a business. A ransomware response plan can help a company to recover from an attack and avoid data loss.
+
+3. **To protect reputation:** A ransomware attack can damage a company's reputation, which can lead to a loss of customers and revenue. A ransomware response plan can help a company to manage the situation and minimize the damage to its reputation.
+
+4. **To reduce the cost of a ransomware attack:** The cost of a ransomware attack can be significant, including the cost of remediation, legal fees, and lost business. A ransomware response plan can help a company to minimize these costs by providing a roadmap for responding to the attack.
+
+**Useful Links:**
+
+[National Cyber Security Centre - Mitigating malware and ransomware attacks](https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks)
+
+[NIST - Ransomware Protection and Response](https://csrc.nist.gov/Projects/ransomware-protection-and-response)
+
+[Cybersecurity and Infrastructure Security Agency - Ransomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide)
+
+[Microsoft Security - Ransomware response](https://www.microsoft.com/en-us/security/blog/2019/12/16/ransomware-response-to-pay-or-not-to-pay/)
+
+[Blog - Creating a Ransomware Response Plan](https://www.msp360.com/resources/blog/designing-a-ransomware-response-plan/)
+
+![image](https://user-images.githubusercontent.com/100603074/210655863-d4044516-022a-4f6b-afaa-cf375c1f01b4.png)
+
+*Image used from https://csrc.nist.gov/Projects/ransomware-protection-and-response*
 
 Malware Detection and Analysis
 ====================
 
 *Tools for detecting and analyzing malware, including antivirus software and forensic analysis tools.*
 
-### [🔙](#tool-list)[]()
+### [🔙](#tool-list)[VirusTotal](https://www.virustotal.com/gui/home/search)
 
-a
+VirusTotal is a website and cloud-based tool that analyzes and scans files, URLs, and software for viruses, worms, and other types of malware.
+
+When a file, URL, or software is submitted to VirusTotal, the tool uses various antivirus engines and other tools to scan and analyze it for malware. It then provides a report with the results of the analysis, which can help security professionals and blue teams identify and respond to potential threats. 
+
+VirusTotal can also be used to check the reputation of a file or URL, and to monitor for malicious activity on a network.
 
 **Install:** 
 
-```bash
-
-```
+Visit [https://www.virustotal.com/gui/home/search](https://www.virustotal.com/gui/home/search)
 
 **Usage:** 
 
 ```bash
+# Recently created documents with macros embedded, detected at least by 5 AVs
+(type:doc OR type: docx) tag:macros p:5+ generated:30d+
 
+# Excel files bundled with powershell scripts and uploaded to VT for the last 10
+days
+(type:xls OR type:xlsx) tag:powershell fs:10d+
+
+# Follina-like exploit payloads
+entity:file magic:"HTML document text" tag:powershell have:itw_url
+
+# URLs related to specified parent domain/subdomain with a specific header in
+the response
+entity:url header_value:"Apache/2.4.41 (Ubuntu)" parent_domain:domain.org
+
+# Suspicious URLs with a specific HTML title
+entity:url ( title:"XY Company" or title:"X.Y. Company" or title:"XYCompany" ) p:5+
 ```
+
+Full documentation can be found [here](https://support.virustotal.com/hc/en-us/categories/360000162878-Documentation).
+
+[VT INTELLIGENCE CHEAT SHEET](https://storage.googleapis.com/vtpublic/reports/VTI%20Cheatsheet.pdf)
+
+![image](https://user-images.githubusercontent.com/100603074/210655958-9a39783e-637e-46a3-a80c-4c64b389de60.png)
+
+*Image used from https://www.virustotal.com/gui/home/search*
+
+### [🔙](#tool-list)[IDA](https://hex-rays.com/ida-free/)
+
+IDA (Interactive Disassembler) is a powerful tool used to reverse engineer and analyze compiled and executable code. 
+
+It can be used to examine the inner workings of software, including malware, and to understand how it functions. IDA allows users to disassemble code, decompile it into a higher-level programming language, and view and edit the resulting source code. This can be useful for identifying vulnerabilities, analyzing malware, and understanding how a program works. 
+
+IDA can also be used to generate graphs and charts that visualize the structure and flow of code, which can make it easier to understand and analyze.
+
+**Install:** 
+
+Download IDA from [here](https://hex-rays.com/ida-free/#download).
+
+**Usage:** 
+
+[IDA Practical Cheatsheet](https://github.com/AdamTaguirov/IDA-practical-cheatsheet)
+
+[IDAPython cheatsheet](https://gist.github.com/icecr4ck/7a7af3277787c794c66965517199fc9c)
+
+[IDA Pro Cheatsheet](https://hex-rays.com/products/ida/support/freefiles/IDA_Pro_Shortcuts.pdf)
+
+![image](https://user-images.githubusercontent.com/100603074/210655977-e52a66eb-7698-4769-b002-a9d6f1503b85.png)
+
+*Image used from https://www.newton.com.tw/wiki/IDA%20Pro*
+
+### [🔙](#tool-list)[Ghidra](https://ghidra-sre.org/)
+
+Ghidra is a free, open-source software reverse engineering tool developed by the National Security Agency (NSA). It is used to analyze compiled and executable code, including malware. 
+
+Ghidra allows users to disassemble code, decompile it into a higher-level programming language, and view and edit the resulting source code. This can be useful for identifying vulnerabilities, analyzing malware, and understanding how a program works. 
+
+Ghidra also includes a range of features and tools that support SRE tasks, such as debugging, code graphing, and data visualization. Ghidra is written in Java and is available for Windows, MacOS, and Linux.
+
+**Install:** 
+
+1. Download the latest release from [here](https://github.com/NationalSecurityAgency/ghidra/releases).
+2. Extract the zip
+
+Full installation and error fix information can be found [here](https://ghidra-sre.org/InstallationGuide.html#Install).
+
+**Usage:** 
+
+1. Navigate to the unzipped folder
+
+```bash
+# Windows
+ghidraRun.bat
+
+# Linux
+./ghidraRun
+```
+
+If Ghidra failed to launch, see the [Troubleshooting](https://ghidra-sre.org/InstallationGuide.html#Troubleshooting) link.
+
+![image](https://user-images.githubusercontent.com/100603074/210656000-9b31d5fc-7b95-447e-94ed-94aef602de46.png)
+
+*Image used from https://www.malwaretech.com/2019/03/video-first-look-at-ghidra-nsa-reverse-engineering-tool.html*
 
 Data Recovery
 ====================
@@ -661,6 +872,8 @@ a
 
 ```
 
+*Image used from *
+
 Digital Forensics
 ====================
 
@@ -681,6 +894,9 @@ a
 ```bash
 
 ```
+
+
+*Image used from *
 
 Security Awareness Training
 ====================
@@ -703,6 +919,9 @@ a
 
 ```
 
+
+*Image used from *
+
 Communication and Collaboration
 ====================
 
@@ -723,3 +942,6 @@ a
 ```bash
 
 ```
+
+
+*Image used from *
