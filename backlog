@@ -5,11 +5,11 @@ Vulnerability Management
   Lynis
 Security Monitoring
   Sysmon
-  OSSEC
-  Suricata
+  Kibana
   Logstash
   Splunk
   ElastAlert
+Threat Tools and Techniques
   https://filesec.io/
   lolbas-project.github.io
   gtfobins.github.io
