@@ -1,7 +1,7 @@
 # BlueTeam-Tools
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/100603074/210274584-956a15fb-0431-46bd-a748-74b79b6ddab0.png" height="370">
+<img src="https://user-images.githubusercontent.com/100603074/210630295-7b06d894-cea8-4ed7-9bd2-816b0d98d968.png" height="370">
 </p>
 
 This github repository contains a collection of **10+** **tools** and **resources** that can be useful for **blue teaming** and **incident response activities**. 
