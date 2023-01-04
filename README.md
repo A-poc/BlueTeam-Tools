@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/100603074/210274584-956a15fb-0431-46bd-a748-74b79b6ddab0.png" height="370">
 </p>
 
-This github repository contains a collection of **5+** **tools** and **resources** that can be useful for **blue teaming** and **incident response activities**. 
+This github repository contains a collection of **10+** **tools** and **resources** that can be useful for **blue teaming** and **incident response activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
 
@@ -46,7 +46,18 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{0 tools}}$</summary>
+    <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <ul>
+        <ul>
+            <li><b><a href="#sysmon">Sysmon</a></b><i> System Monitor for Windows.</i></li>
+            <li><b><a href="#kibana">Kibana</a></b><i> Data visualization and exploration.</i></li>
+            <li><b><a href="#logstash">Logstash</a></b><i> Data collection and processing.</i></li>
+        </ul>
+    </ul>
+</details>
+
+<details open>
+    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{0 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#x">x</a></b><i> x</i></li>
@@ -399,6 +410,97 @@ Security Monitoring
 
 *Tools for collecting and analyzing security logs and other data sources to identify potential threats and anomalous activity.*
 
+### [🔙](#tool-list)[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+
+Sysmon is a Windows system monitor that tracks system activity and logs it to the Windows event log.
+
+It provides detailed information about system activity, including process creation and termination, network connections, and changes to file creation time.
+
+Sysmon can be configured to monitor specific events or processes and can be used to alert administrators of suspicious activity on a system.
+
+**Install:** 
+
+Download the sysmon binary from [here](https://download.sysinternals.com/files/Sysmon.zip).
+
+**Usage:** 
+
+```bash
+# Install with default settings (process images hashed with SHA1 and no network monitoring)
+sysmon -accepteula -i
+
+# Install Sysmon with a configuration file (as described below)
+sysmon -accepteula -i c:\windows\config.xml
+
+# Uninstall
+sysmon -u
+
+# Dump the current configuration
+sysmon -c
+```
+
+Full event filtering information can be found [here](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-filtering-entries).
+
+The Microsoft documentation page can be found [here](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon).
+
+![image](https://user-images.githubusercontent.com/100603074/210621009-b3c31c2b-f789-450a-acbf-7578fa943abd.png)
+
+*Image used from https://nsaneforums.com/topic/281207-sysmon-5-brings-registry-modification-logging/*
+
+### [🔙](#tool-list)[Kibana](https://www.elastic.co/kibana/)
+
+Kibana is an open-source data visualization and exploration tool that is often used for log analysis in combination with Elasticsearch.
+
+Kibana provides a user-friendly interface for searching, visualizing, and analyzing log data, which can be helpful for identifying patterns and trends that may indicate a security threat.
+
+Kibana can be used to analyze a wide range of data sources, including system logs, network logs, and application logs. It can also be used to create custom dashboards and alerts to help security teams stay informed about potential threats and respond quickly to incidents.
+
+**Install:** 
+
+You can download Kibana from [here](https://www.elastic.co/downloads/kibana).
+
+Installation instructions can be found [here](https://www.elastic.co/guide/en/kibana/current/install.html).
+
+**Usage: (Visualize and explore log data)** 
+
+Kibana provides a range of visualization tools that can help you identify patterns and trends in your log data. You can use these tools to create custom dashboards that display relevant metrics and alerts.
+
+**Usage: (Threat Alerting)**
+
+Kibana can be configured to send alerts when it detects certain patterns or anomalies in your log data. You can set up alerts to notify you of potential security threats, such as failed login attempts or network connections to known malicious IP addresses.
+
+Nice [blog](https://phoenixnap.com/kb/kibana-tutorial) about querying and visualizing data in Kibana.
+
+![image](https://user-images.githubusercontent.com/100603074/210621061-badf3acf-2680-42c5-bbd9-43bca7a85cf2.png)
+
+*Image used from https://www.pinterest.co.uk/pin/analysing-honeypot-data-using-kibana-and-elasticsearch--684758318328369269/*
+
+### [🔙](#tool-list)[Logstash](https://www.elastic.co/logstash/)
+
+Logstash is a open-source data collection engine with real-time pipelining capabilities. It is a server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to a "stash" like Elasticsearch.
+
+Logstash has a rich set of plugins, which allows it to connect to a variety of sources and process the data in multiple ways. It can parse and transform logs, translate data into a structured format, or send it to another tool for further processing.
+
+With its ability to process large volumes of data quickly, Logstash is an integral part of the ELK stack (Elasticsearch, Logstash, and Kibana) and is often used to centralize, transform, and monitor log data.
+
+**Install:** 
+
+Download logstash from [here](https://www.elastic.co/downloads/logstash).
+
+**Usage:** 
+
+Full logstash documentation [here](https://www.elastic.co/guide/en/logstash/current/introduction.html).
+
+Configuration examples [here](https://www.elastic.co/guide/en/logstash/current/config-examples.html).
+
+![image](https://user-images.githubusercontent.com/100603074/210621111-e7630493-bc1c-41fa-af98-0261fbf6e293.png)
+
+*Image used from https://www.elastic.co/guide/en/logstash/current/logstash-modules.html*
+
+Threat Tools and Techniques
+====================
+
+*Tools for identifying and implementing detections against TTPs used by threat actors.*
+
 ### [🔙](#tool-list)[]()
 
 a
@@ -414,6 +516,10 @@ a
 ```bash
 
 ```
+
+
+
+*Image used from *
 
 Threat Intelligence
 ====================
