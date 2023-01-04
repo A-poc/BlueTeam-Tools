@@ -19,27 +19,16 @@ Malware Detection and Analysis
   YARA
   Cuckoo Sandbox
   Radare2
-  The Sleuth Kit (TSK)
   dnSpy https://github.com/dnSpy/dnSpy
 Data Recovery
-  TestDisk
-  Recuva
-  Extundelete
+-
 Digital Forensics
-  SANS SIFT
   Volatility
-  The Sleuth Kit
-  Autopsy
 Security Awareness Training
-  HackTheBox
-  TryHackMe
-  PhishMe
   KnowBe4
   Wombat Security
   Imersivelabs
 Communication and Collaboration
-  Twitter
-  Facebook TheatExchange
   ArcSight SIEM
   LogRhythm SIEM
   AlienVault USM SIEM
