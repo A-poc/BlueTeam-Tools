@@ -1,10 +1,10 @@
 # BlueTeam-Tools
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/100603074/210630295-7b06d894-cea8-4ed7-9bd2-816b0d98d968.png" height="370">
-</p>
+<img src="https://user-images.githubusercontent.com/100603074/210680535-40d8c113-2336-4417-bdb4-4825a7477164.png" height="300">
+</p> 
 
-This github repository contains a collection of **35+** **tools** and **resources** that can be useful for **blue teaming** and **incident response activities**. 
+This github repository contains a collection of **35+** **tools** and **resources** that can be useful for **blue teaming activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
 
@@ -51,9 +51,9 @@ Some of the tools may be specifically designed for blue teaming, while others ar
     <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{3 tools}}$</summary>
     <ul>
         <ul>
-            <li><b><a href="#sysmon">Sysmon</a></b><i> System Monitor for Windows.</i></li>
-            <li><b><a href="#kibana">Kibana</a></b><i> Data visualization and exploration.</i></li>
-            <li><b><a href="#logstash">Logstash</a></b><i> Data collection and processing.</i></li>
+            <li><b><a href="#sysmon">Sysmon</a></b><i> System Monitor for Windows</i></li>
+            <li><b><a href="#kibana">Kibana</a></b><i> Data visualization and exploration</i></li>
+            <li><b><a href="#logstash">Logstash</a></b><i> Data collection and processing</i></li>
         </ul>
     </ul>
 </details>
