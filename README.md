@@ -59,12 +59,13 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{4 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
             <li><b><a href="#gtfobinsgithubio">gtfobins.github.io</a></b><i> Living Off The Land Linux Binaries</i></li>
             <li><b><a href="#filesecio">filesec.io</a></b><i> Attacker file extensions</i></li>
+            <li><b><a href="#kql-search">KQL Search</a></b><i> KQL query aggregator</i></li>
         </ul>
     </ul>
 </details>
@@ -585,6 +586,22 @@ Here are some project links to get started:
 ![image](https://user-images.githubusercontent.com/100603074/210625626-58223992-2821-42c6-878a-e6aea4b9a508.png)
 
 *Image used from https://filesec.io/*
+
+### [🔙](#tool-list)[KQL Search](https://www.kqlsearch.com/)
+
+KQL stands for "Kusto Query Language", and it is a query language used to search and filter data in Azure Monitor logs. It is similar to SQL, but is more optimized for log analytics and time-series data.
+
+KQL query language is particularly useful for blue teamers because it allows you to quickly and easily search through large volumes of log data to identify security events and anomalies that may indicate a threat.
+
+KQL Search is a web app created by [@ugurkocde](https://twitter.com/ugurkocde) that aggregates KQL queries that are shared on GitHub.
+
+You can visit the site at [https://www.kqlsearch.com/](https://www.kqlsearch.com/).
+
+More information about Kusto Query Language (KQL) can be found [here](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/).
+
+![image](https://user-images.githubusercontent.com/100603074/210736862-1e0cf987-7c85-40c1-b51c-1f3a1f946f7d.png)
+
+*Image used from https://www.kqlsearch.com/*
 
 Threat Intelligence
 ====================
