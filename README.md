@@ -59,13 +59,14 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{4 tools}}$</summary>
+    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{5 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
             <li><b><a href="#gtfobinsgithubio">gtfobins.github.io</a></b><i> Living Off The Land Linux Binaries</i></li>
             <li><b><a href="#filesecio">filesec.io</a></b><i> Attacker file extensions</i></li>
             <li><b><a href="#kql-search">KQL Search</a></b><i> KQL query aggregator</i></li>
+            <li><b><a href="#unprotect-project">Unprotect Project</a></b><i> Malware evasion techniques knowledge base</i></li>
         </ul>
     </ul>
 </details>
@@ -602,6 +603,22 @@ More information about Kusto Query Language (KQL) can be found [here](https://le
 ![image](https://user-images.githubusercontent.com/100603074/210736862-1e0cf987-7c85-40c1-b51c-1f3a1f946f7d.png)
 
 *Image used from https://www.kqlsearch.com/*
+
+### [🔙](#tool-list)[Unprotect Project](https://unprotect.it/about/)
+
+Malware authors spend a great deal of time and effort to develop complex code to perform malicious actions against a target system. It is crucial for malware to remain undetected and avoid sandbox analysis, antiviruses or malware analysts. 
+
+With this kind of technics, malware are able to pass under the radar and stay undetected on a system. The goal of this free database is to centralize the information about malware evasion techniques.
+
+The project aims to provide Malware Analysts and Defenders with actionable insights and detection capabilities to shorten their response times.
+
+The project can be found at [https://unprotect.it/](https://unprotect.it/).
+
+The project has an API - Docs [here](https://unprotect.it/api/).
+
+![image](https://user-images.githubusercontent.com/100603074/210743650-6adaddce-ecb3-41bb-854b-292482b73d55.png)
+
+*Image used from https://unprotect.it/map/*
 
 Threat Intelligence
 ====================
