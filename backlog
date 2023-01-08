@@ -11,6 +11,7 @@ Security Monitoring
   Splunk
   ElastAlert
 Threat Tools and Techniques
+  https://github.com/AzureAD/Azure-AD-Incident-Response-PowerShell-Module
   https://github.com/keraattin/EmailAnalyzer
 Threat Intelligence
   ThreatCrowd
