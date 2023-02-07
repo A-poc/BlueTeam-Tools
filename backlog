@@ -8,6 +8,7 @@ Vulnerability Management
   HackerOne
   BugCrowd
 Security Monitoring
+  https://github.com/domainaware/parsedmarc
   https://github.com/x0rz/phishing_catcher
   SysmonSearch
   OSquery + Kolide Fleet
