@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/100603074/210680535-40d8c113-2336-4417-bdb4-4825a7477164.png" height="300">
 </p> 
 
-This github repository contains a collection of **35+** **tools** and **resources** that can be useful for **blue teaming activities**. 
+This github repository contains a collection of **40+** **tools** and **resources** that can be useful for **blue teaming activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
 
@@ -23,6 +23,15 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 # Tool List
 
 <details open>
+    <summary><b>Blue Team Tips</b> $\textcolor{gray}{\text{1 tip}}$</summary>
+    <ul>
+        <ul>
+            <li><b><a href="#payload-extraction-with-process-hacker">Payload extraction with Process Hacker</a></b><i> @embee_research</i></li>
+        </ul>
+    </ul>
+</details>
+
+<details open>
     <summary><b>Network Discovery and Mapping</b> $\textcolor{gray}{\text{6 tools}}$</summary>
     <ul>
         <ul>
@@ -37,29 +46,33 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Vulnerability Management</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Vulnerability Management</b> $\textcolor{gray}{\text{4 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#openvas">OpenVAS</a></b><i> Open-source vulnerability scanner</i></li>
             <li><b><a href="#nessus-essentials">Nessus Essentials</a></b><i> Vulnerability scanner</i></li>
             <li><b><a href="#nexpose">Nexpose</a></b><i> Vulnerability management tool</i></li>
+            <li><b><a href="#hackerone">HackerOne</a></b><i> Bug Bounty Management Platform</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{6 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#sysmon">Sysmon</a></b><i> System Monitor for Windows</i></li>
             <li><b><a href="#kibana">Kibana</a></b><i> Data visualization and exploration</i></li>
             <li><b><a href="#logstash">Logstash</a></b><i> Data collection and processing</i></li>
+            <li><b><a href="#parsedmarc">parsedmarc</a></b><i> Email DMARC data visualisation</i></li>
+            <li><b><a href="#phishing-catcher">Phishing Catcher</a></b><i> Phishing catcher using Certstream</i></li>
+            <li><b><a href="#maltrail">maltrail</a></b><i> Malicious traffic detection system</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{5 tools}}$</summary>
+    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{6 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
@@ -67,6 +80,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
             <li><b><a href="#filesecio">filesec.io</a></b><i> Attacker file extensions</i></li>
             <li><b><a href="#kql-search">KQL Search</a></b><i> KQL query aggregator</i></li>
             <li><b><a href="#unprotect-project">Unprotect Project</a></b><i> Malware evasion techniques knowledge base</i></li>
+            <li><b><a href="#chainsaw">chainsaw</a></b><i> Fast Windows Forensic Artefacts Searcher</i></li>
         </ul>
     </ul>
 </details>
@@ -146,6 +160,22 @@ Some of the tools may be specifically designed for blue teaming, while others ar
         </ul>
     </ul>
 </details>
+
+Blue Team Tips
+====================
+
+*Learn from Blue Teamers with a collection of Blue Teaming Tips. These tips cover a range of tactics, tools, and methodologies to improve your blue teaming abilities.*
+
+### [🔙](#tool-list)Payload extraction with Process Hacker
+
+![image](https://user-images.githubusercontent.com/100603074/217382117-acb26f85-d352-43b3-8818-6c5a0d90f350.png)
+
+**Description:** 
+*'Malware Analysis Tip  - Use Process Hacker to watch for suspicious .NET assemblies in newly spawned processes. Combined with DnSpy - it's possible to locate and extract malicious payloads without needing to manually de-obfuscate.'*
+
+**Credit:** [@embee_research](https://twitter.com/embee_research)
+
+**Link:** [Twitter](https://twitter.com/embee_research/status/1614871485931458560)
 
 Network Discovery and Mapping
 ====================
@@ -424,6 +454,18 @@ For usage and scan creation instructions see [here](https://docs.rapid7.com/nexp
 
 *Image used from https://www.rapid7.com/products/nexpose/*
 
+### [🔙](#tool-list)[HackerOne](https://www.hackerone.com/)
+
+HackerOne is a bug bounty management company that can be used to create and manage bug bounty programs for your business.
+
+Bug bounty programs are a great way to outsource external vulnerability assessments, with the platform offering both private and public programs with the ability set program scopes and rules of engagement.
+
+HackerOne also offer initial triage and management of external bug reports from researchers, with the ability to compensate researchers directly through the platform.
+
+![image](https://user-images.githubusercontent.com/100603074/217382232-b8df098a-c74b-4552-b344-f5228c84c383.png)
+
+*Image used from https://www.hackerone.com/product/bug-bounty-platform*
+
 Security Monitoring
 ====================
 
@@ -514,6 +556,65 @@ Configuration examples [here](https://www.elastic.co/guide/en/logstash/current/c
 ![image](https://user-images.githubusercontent.com/100603074/210621111-e7630493-bc1c-41fa-af98-0261fbf6e293.png)
 
 *Image used from https://www.elastic.co/guide/en/logstash/current/logstash-modules.html*
+
+### [🔙](#tool-list)[parsedmarc](https://github.com/domainaware/parsedmarc)
+
+A Python module and CLI utility for parsing DMARC reports. 
+
+When used with Elasticsearch and Kibana (or Splunk), it works as a self-hosted open source alternative to commercial DMARC report processing services such as Agari Brand Protection, Dmarcian, OnDMARC, ProofPoint Email Fraud Defense, and Valimail.
+
+Features:
+
+- Parses draft and 1.0 standard aggregate/rua reports
+- Parses forensic/failure/ruf reports
+- Can parse reports from an inbox over IMAP, Microsoft Graph, or Gmail API
+- Transparently handles gzip or zip compressed reports
+- Consistent data structures
+- Simple JSON and/or CSV output
+- Optionally email the results
+- Optionally send the results to Elasticsearch and/or Splunk, for use with premade dashboards
+- Optionally send reports to Apache Kafka
+
+![image](https://user-images.githubusercontent.com/100603074/217382301-064ac450-3690-469d-9c86-c2e3c6cdeca9.png)
+
+*Image used from https://github.com/domainaware/parsedmarc*
+
+### [🔙](#tool-list)[Phishing Catcher](https://github.com/x0rz/phishing_catcher)
+
+As a business, phishing can cause reputational and financial damage to you and your customers. Being able to proactively identify phishing infrastructure targeting your business helps to reduce the risk of these damages.
+
+Phish catcher allows you to catch possible phishing domains in near real time by looking for suspicious TLS certificate issuances reported to the Certificate Transparency Log (CTL) via the CertStream API. 
+
+"Suspicious" issuances are those whose domain name scores beyond a certain threshold based on a configuration file.
+
+![image](https://user-images.githubusercontent.com/100603074/217382453-400a044b-720d-47ce-adff-0a23e5511ae1.png)
+
+*Image used from https://github.com/x0rz/phishing_catcher*
+
+### [🔙](#tool-list)[maltrail](https://github.com/stamparm/maltrail)
+
+Maltrail is a malicious traffic detection system, utilizing publicly available lists containing malicious and/or generally suspicious trails, along with static trails compiled from various AV reports and custom user defined lists. A trail can be anything from domain name, URL, IP address or HTTP User-Agent header value.
+
+A demo page for this tool can be found [here](https://maltraildemo.github.io/).
+
+**Install:** 
+
+```bash
+sudo apt-get install git python3 python3-dev python3-pip python-is-python3 libpcap-dev build-essential procps schedtool
+sudo pip3 install pcapy-ng
+git clone --depth 1 https://github.com/stamparm/maltrail.git
+cd maltrail
+```
+
+**Usage:** 
+
+```bash
+sudo python3 sensor.py
+```
+
+![image](https://user-images.githubusercontent.com/100603074/217382540-fa1283d7-9825-4529-a92f-11f447e4657b.png)
+
+*Image used from https://github.com/stamparm/maltrail*
 
 Threat Tools and Techniques
 ====================
@@ -619,6 +720,39 @@ The project has an API - Docs [here](https://unprotect.it/api/).
 ![image](https://user-images.githubusercontent.com/100603074/210743650-6adaddce-ecb3-41bb-854b-292482b73d55.png)
 
 *Image used from https://unprotect.it/map/*
+
+### [🔙](#tool-list)[chainsaw](https://github.com/WithSecureLabs/chainsaw)
+
+Chainsaw provides a powerful ‘first-response’ capability to quickly identify threats within Windows forensic artefacts such as Event Logs and MFTs. Chainsaw offers a generic and fast method of searching through event logs for keywords, and by identifying threats using built-in support for Sigma detection rules, and via custom Chainsaw detection rules.
+
+Features:
+
+- Hunt for threats using Sigma detection rules and custom Chainsaw detection rules
+- Search and extract forensic artefacts by string matching, and regex patterns
+- Lightning fast, written in rust, wrapping the EVTX parser library by @OBenamram
+- Clean and lightweight execution and output formats without unnecessary bloat
+- Document tagging (detection logic matching) provided by the TAU Engine Library
+- Output results in a variety of formats, such as ASCII table format, CSV format, and JSON format
+- Can be run on MacOS, Linux and Windows
+
+**Install:** 
+
+```bash
+git clone https://github.com/countercept/chainsaw.git
+cargo build --release
+git clone https://github.com/SigmaHQ/sigma
+git clone https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES.git
+```
+
+**Usage:** 
+
+```bash
+./chainsaw hunt EVTX-ATTACK-SAMPLES/ -s sigma/ --mapping mappings/sigma-event-logs-all.yml
+```
+
+![image](https://user-images.githubusercontent.com/100603074/217382675-1834c13d-1789-4ea7-a46e-25808477bcf0.png)
+
+*Image used from https://twitter.com/FranticTyping/status/1433386064429916162/*
 
 Threat Intelligence
 ====================
