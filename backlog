@@ -7,6 +7,7 @@ Vulnerability Management
   Lynis
   BugCrowd
 Security Monitoring
+  https://github.com/Velocidex/velociraptor
   SysmonSearch
   OSquery + Kolide Fleet
   DNS mining pools https://github.com/stamparm/maltrail/blob/master/trails/static/suspicious/crypto_mining.txt | https://www.nextron-systems.com/2021/10/24/monero-mining-pool-fqdns/
