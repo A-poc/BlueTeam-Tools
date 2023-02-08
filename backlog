@@ -1,5 +1,5 @@
 Blue Team Tips
--
+  GPO Setting the default application for HTA files to notepad.exe (Prevents HTA double click executing malicious code)
 Network Discovery and Mapping
 -
 Vulnerability Management
