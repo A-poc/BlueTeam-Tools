@@ -7,6 +7,7 @@ Vulnerability Management
   Lynis
   BugCrowd
 Security Monitoring
+  https://github.com/godaddy/procfilter
   https://github.com/Velocidex/velociraptor
   SysmonSearch
   OSquery + Kolide Fleet
