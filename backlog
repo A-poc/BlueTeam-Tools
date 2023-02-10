@@ -16,6 +16,7 @@ Security Monitoring
   Splunk
   ElastAlert
 Threat Tools and Techniques
+  https://github.com/MarkBaggett/freq
   https://github.com/Neo23x0/yarGen
   https://github.com/AzureAD/Azure-AD-Incident-Response-PowerShell-Module
   https://github.com/keraattin/EmailAnalyzer
