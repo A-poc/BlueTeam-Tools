@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/100603074/210680535-40d8c113-2336-4417-bdb4-4825a7477164.png" height="300">
 </p> 
 
-This github repository contains a collection of **40+** **tools** and **resources** that can be useful for **blue teaming activities**. 
+This github repository contains a collection of **50+** **tools** and **resources** that can be useful for **blue teaming activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
 
@@ -23,10 +23,12 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 # Tool List
 
 <details open>
-    <summary><b>Blue Team Tips</b> $\textcolor{gray}{\text{1 tip}}$</summary>
+    <summary><b>Blue Team Tips</b> $\textcolor{gray}{\text{3 tips}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#payload-extraction-with-process-hacker">Payload extraction with Process Hacker</a></b><i> @embee_research</i></li>
+            <li><b><a href="#prevent-script-execution-via-double-click">Prevent Script Execution via Double Click</a></b><i> Default Application GPO Change</i></li>
+            <li><b><a href="#detect-cryptojacking-malware-with-proxy-logs">Detect Cryptojacking Malware with Proxy Logs</a></b><i> Dave Mckay</i></li>
         </ul>
     </ul>
 </details>
@@ -58,7 +60,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{6 tools}}$</summary>
+    <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{10 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#sysmon">Sysmon</a></b><i> System Monitor for Windows</i></li>
@@ -67,12 +69,16 @@ Some of the tools may be specifically designed for blue teaming, while others ar
             <li><b><a href="#parsedmarc">parsedmarc</a></b><i> Email DMARC data visualisation</i></li>
             <li><b><a href="#phishing-catcher">Phishing Catcher</a></b><i> Phishing catcher using Certstream</i></li>
             <li><b><a href="#maltrail">maltrail</a></b><i> Malicious traffic detection system</i></li>
+            <li><b><a href="#autorunstowineventlog">AutorunsToWinEventLog</a></b><i> Windows AutoRuns Event Parser</i></li>
+            <li><b><a href="#procfilter">procfilter</a></b><i> YARA-integrated process denial framework</i></li>
+            <li><b><a href="#velociraptor">velociraptor</a></b><i> Endpoint visibility and collection tool</i></li>
+            <li><b><a href="#sysmonsearch">SysmonSearch</a></b><i> Sysmon event log visualisation</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{6 tools}}$</summary>
+    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{10 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
@@ -81,6 +87,10 @@ Some of the tools may be specifically designed for blue teaming, while others ar
             <li><b><a href="#kql-search">KQL Search</a></b><i> KQL query aggregator</i></li>
             <li><b><a href="#unprotect-project">Unprotect Project</a></b><i> Malware evasion techniques knowledge base</i></li>
             <li><b><a href="#chainsaw">chainsaw</a></b><i> Fast Windows Forensic Artefacts Searcher</i></li>
+            <li><b><a href="#freq">freq</a></b><i> Domain generation algorithm malware detection</i></li>
+            <li><b><a href="#yargen">yarGen</a></b><i> YARA rule generator</i></li>
+            <li><b><a href="#emailanalyzer">EmailAnalyzer</a></b><i> Suspicious emails analyser</i></li>
+            <li><b><a href="#vcg">VCG</a></b><i> Code security scanning tool</i></li>
         </ul>
     </ul>
 </details>
@@ -176,6 +186,26 @@ Blue Team Tips
 **Credit:** [@embee_research](https://twitter.com/embee_research)
 
 **Link:** [Twitter](https://twitter.com/embee_research/status/1614871485931458560)
+
+### [🔙](#tool-list)Prevent Script Execution via Double Click
+
+![image](https://user-images.githubusercontent.com/100603074/218200763-53f9fc80-59e1-468a-93e2-69b84d1c7196.png)
+
+**Description:** 
+*On Windows, it's common to see threat actors achieve initial execution via malicious script files masquerading as Microsoft Office files. A nice way to prevent this attack chain is to alter the default application associated with these files (HTA, JS, VBA, VBS) to `notepad.exe`. Now when a user is successfully tricked into clicking a HTA file on disk it will open the script in notepad and execution will not occur*.
+
+**Credit:** [bluesoul](https://bluesoul.me/)
+
+**Link:** [Blog](https://bluesoul.me/2016/05/12/use-gpo-to-change-the-default-behavior-of-potentially-malicious-file-extensions/)
+
+### [🔙](#tool-list)Detect Cryptojacking Malware with Proxy Logs
+
+**Description:** 
+*Cryptojacking malware is becoming more suffisticated, with mining malware leveraging DLL sideloading to hide on machine and reducing CPU load to stay below detection thresholds. One thing they all have in common is they have to make connections to mining pools, this is where we can find them. Monitor your proxy and DNS logs for connections containing common mining pool strings (e.g `*xmr.*` OR `*pool.com` OR `*pool.org` OR `pool.*`).*
+
+**Credit:** [Dave Mckay](https://www.howtogeek.com/author/davidmckay/)
+
+**Link:** [Blog](https://www.howtogeek.com/devops/how-to-detect-and-defeat-cryptominers-in-your-network/)
 
 Network Discovery and Mapping
 ====================
@@ -616,6 +646,129 @@ sudo python3 sensor.py
 
 *Image used from https://github.com/stamparm/maltrail*
 
+### [🔙](#tool-list)[AutorunsToWinEventLog](https://github.com/palantir/windows-event-forwarding/tree/master/AutorunsToWinEventLog)
+
+Autoruns is a tool developed by Sysinternals that allows you to view all of the locations in Windows where applications can insert themselves to launch at boot or when certain applications are opened. Malware often takes advantages of these locations to ensure that it runs whenever your computer boots up.
+
+Autoruns conveniently includes a non-interactive command line utility. This code generates a CSV of Autoruns entries, converts them to JSON, and finally inserts them into a custom Windows Event Log. By doing this, we can take advantage of our existing WEF infrastructure to get these entries into our SIEM and start looking for signs of malicious persistence on endpoints and servers.
+
+**Install:** 
+
+Download [AutorunsToWinEventLog](https://github.com/palantir/windows-event-forwarding/tree/master/AutorunsToWinEventLog).
+
+**Usage:** 
+
+From an Admin Powershell console run `.\Install.ps1` 
+
+This script does the following:
+
+- Creates the directory structure at c:\Program Files\AutorunsToWinEventLog
+- Copies over AutorunsToWinEventLog.ps1 to that directory
+- Downloads Autorunsc64.exe from https://live.sysinternals.com
+- Sets up a scheduled task to run the script daily @ 11am
+
+![image](https://user-images.githubusercontent.com/100603074/218199447-40e7add1-68ee-44e2-a297-3bf03c977a9c.png)
+
+*Image used from https://www.detectionlab.network/usage/autorunstowineventlog/*
+
+### [🔙](#tool-list)[procfilter](https://github.com/godaddy/procfilter)
+
+ProcFilter is a process filtering system for Windows with built-in [YARA](https://github.com/virustotal/yara) integration. YARA rules can be instrumented with custom meta tags that tailor its response to rule matches. It runs as a Windows service and is integrated with [Microsoft's ETW API](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803%28v=vs.85%29.aspx), making results viewable in the Windows Event Log. Installation, activation, and removal can be done dynamically and does not require a reboot.
+
+ProcFilter's intended use is for malware analysts to be able to create YARA signatures that protect their Windows environments against a specific threat. It does not include a large signature set. Think lightweight, precise, and targeted rather than broad or all-encompassing. ProcFilter is also intended for use in controlled analysis environments where custom plugins can perform artifact-specific actions.
+
+**Install:** 
+
+[ProcFilter x86/x64 Release/Debug Installers](https://github.com/godaddy/procfilter/releases)
+
+*Note: Unpatched Windows 7 systems require hotfix 3033929 to load the driver component. More information can be found here.*
+
+Nice configuration template file [here](https://github.com/godaddy/procfilter/blob/master/files/procfilter.ini).
+
+**Usage:** 
+
+```
+procfilter -start
+```
+
+Usage screenshots can be found [here](https://github.com/godaddy/procfilter#screenshots).
+
+![image](https://user-images.githubusercontent.com/100603074/218200282-f2465b93-169a-43d6-8e12-dea61ed9272c.png)
+
+*Image used from https://github.com/godaddy/procfilter*
+
+### [🔙](#tool-list)[velociraptor](https://github.com/Velocidex/velociraptor)
+
+Velociraptor is a unique, advanced open-source endpoint monitoring, digital forensic and cyber response platform.
+
+It was developed by Digital Forensic and Incident Response (DFIR) professionals who needed a powerful and efficient way to hunt for specific artifacts and monitor activities across fleets of endpoints. Velociraptor provides you with the ability to more effectively respond to a wide range of digital forensic and cyber incident response investigations and data breaches:
+
+Features:
+
+- Reconstruct attacker activities through digital forensic analysis
+- Hunt for evidence of sophisticated adversaries
+- Investigate malware outbreaks and other suspicious network activities
+- Monitory continuously for suspicious user activities, such as files copied to USB devices
+- Discover whether disclosure of confidential information occurred outside the network
+- Gather endpoint data over time for use in threat hunting and future investigations
+
+
+**Install:** 
+
+Download the binary from the [release page](https://github.com/Velocidex/velociraptor/releases).
+
+**Usage:** 
+
+```
+velociraptor gui
+```
+
+Full usage information can be found [here](https://docs.velociraptor.app/).
+
+![image](https://user-images.githubusercontent.com/100603074/218200327-3f5ab599-11f1-46dc-8f28-b27c1258224a.png)
+
+*Image used from https://docs.velociraptor.app*
+
+### [🔙](#tool-list)[SysmonSearch](https://github.com/JPCERTCC/SysmonSearch)
+
+SysmonSearch makes event log analysis more effective and less time consuming, by aggregating event logs generated by Microsoft's Sysmon.
+
+  SysmonSearch uses Elasticserach and Kibana (and Kibana plugin).
+  * **Elasticserach**  
+    Elasticsearch collects/stores Sysmon's event log.
+  * **Kibana**  
+    Kibana provides user interface for your Sysmon's event log analysis. The following functions are implemented as Kibana plugin.
+    * Visualizes Function  
+      This function visualizes Sysmon's event logs to illustrate correlation of processes and networks.
+    * Statistical Function  
+      This function collects the statistics of each device or Sysmon's event ID.
+    * Monitor Function  
+      This function monitor incoming logs based on the preconfigured rules, and trigers alert.
+  * **StixIoC server**  
+    You can add search/monitor condition by uploading STIX/IOC file. From StixIoC server Web UI, you can upload STIXv1, STIXv2 and OpenIOC format files.
+
+**Install: (Linux)** 
+
+```bash
+git clone https://github.com/JPCERTCC/SysmonSearch.git
+```
+
+[Modify Elasticsearch configuration](https://github.com/JPCERTCC/SysmonSearch/wiki/Install#elasticsearch-server-setup)
+
+[Modify Kibana configuration](https://github.com/JPCERTCC/SysmonSearch/wiki/Install#kibana-server-setup)
+
+Full installation instructions can be found [here](https://github.com/JPCERTCC/SysmonSearch/wiki/Install).
+
+**Usage:** 
+
+*Once Elasticsearch and Kibana configurations have been modified, restart the services and navigate to your Kibana interface. The SysmonSearch ribbon should be visible.*
+
+[Visualize the Sysmon log to investigate suspicious behavior](https://blogs.jpcert.or.jp/ja/2018/09/SysmonSearch.html)
+
+![image](https://user-images.githubusercontent.com/100603074/218200383-84e4c9f4-3e34-4973-b37c-a9160a74b5e0.png)
+
+*Image used from https://blogs.jpcert.or.jp/ja/2018/09/SysmonSearch.html*
+
 Threat Tools and Techniques
 ====================
 
@@ -753,6 +906,128 @@ git clone https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES.git
 ![image](https://user-images.githubusercontent.com/100603074/217382675-1834c13d-1789-4ea7-a46e-25808477bcf0.png)
 
 *Image used from https://twitter.com/FranticTyping/status/1433386064429916162/*
+
+### [🔙](#tool-list)[freq](https://github.com/MarkBaggett/freq)
+
+Adversaries attempt to bypass signature based/pattern matching/blacklist techniques by introducing random: filenames, service names, workstation names, domains, hostnames, SSL cert subjects and issuer subjects, etc.
+
+Freq is a python API designed by Mark Baggett to handle mass entropy testing. It was designed to be used in conjunction with a SIEM solutions but can work with anything that can submit a web request.
+
+The tool uses frequency tables that map how likely one character will follow another
+
+**Install:** 
+
+```bash
+git clone https://github.com/MarkBaggett/freq
+cd freq
+```
+
+**Usage:** 
+
+```bash
+# Running freq_server.py on port 10004 and using a frequency table of /opt/freq/dns.freq
+/usr/bin/python /opt/freq/freq_server.py 10004 /opt/freq/dns.freq
+```
+
+### [🔙](#tool-list)[yarGen](https://github.com/Neo23x0/yarGen)
+
+yarGen is a generator for YARA rules
+
+The main principle is the creation of yara rules from strings found in malware files while removing all strings that also appear in goodware files. Therefore yarGen includes a big goodware strings and opcode database as ZIP archives that have to be extracted before the first use.
+
+The rule generation process also tries to identify similarities between the files that get analyzed and then combines the strings to so called super rules. The super rule generation does not remove the simple rule for the files that have been combined in a single super rule. This means that there is some redundancy when super rules are created. You can suppress a simple rule for a file that was already covered by super rule by using --nosimple.
+
+**Install:** 
+
+Download the latest [release](https://github.com/Neo23x0/yarGen/releases).
+
+```bash
+pip install -r requirements.txt
+python yarGen.py --update
+```
+
+**Usage:** 
+
+```bash
+# Create a new strings and opcodes database from an Office 2013 program directory
+yarGen.py -c --opcodes -i office -g /opt/packs/office2013
+
+# Update the once created databases with the "-u" parameter
+yarGen.py -u --opcodes -i office -g /opt/packs/office365
+```
+
+Usage examples can be found [here](https://github.com/Neo23x0/yarGen#examples).
+
+![image](https://user-images.githubusercontent.com/100603074/218200487-8476950d-c63e-4d5a-a03c-f2969b6001cc.png)
+
+*Image used from https://github.com/Neo23x0/yarGen*
+
+### [🔙](#tool-list)[EmailAnalyzer](https://github.com/keraattin/EmailAnalyzer)
+
+With EmailAnalyzer you can able to analyze your suspicious emails. You can extract headers, links and hashes from the .eml file
+
+**Install:** 
+
+```bash
+git clone https://github.com/keraattin/EmailAnalyzer
+cd EmailAnalyzer
+```
+
+**Usage:** 
+
+```bash
+# View headers in eml file
+python3 email-analyzer.py -f <eml file> --headers
+
+# Get hashes 
+python3 email-analyzer.py -f <eml file> --digests
+
+# Get links
+python3 email-analyzer.py -f <eml file> --links
+
+# Get attachments
+python3 email-analyzer.py -f <eml file> --attachments
+```
+
+![image](https://user-images.githubusercontent.com/100603074/218200574-d9917b8c-433b-4bab-8db0-b6628b0d9424.png)
+
+*Text used from https://github.com/keraattin/EmailAnalyzer*
+
+### [🔙](#tool-list)[VCG](https://github.com/nccgroup/VCG)
+
+VCG is an automated code security review tool that handles C/C++, Java, C#, VB and PL/SQL. It has a few features that should hopefully make it useful to anyone conducting code security reviews, particularly where time is at a premium:
+
+- In addition to performing some more complex checks it also has a config file for each language that basically allows you to add any bad functions (or other text) that you want to search for
+- It attempts to find a range of around 20 phrases within comments that can indicate broken code (“ToDo”, “FixMe”, “Kludge”, etc.)
+- It provides a nice pie chart (for the entire codebase and for individual files) showing relative proportions of code, whitespace, comments, ‘ToDo’ style comments and bad code
+
+**Install:** 
+
+You can install the pre-compiled binary here.
+
+Open the project .sln, choose "Release", and build.
+
+**Usage:** 
+
+```
+STARTUP OPTIONS:
+	(Set desired starting point for GUI. If using console mode these options will set target(s) to be scanned.)
+	-t, --target <Filename|DirectoryName>:	Set target file or directory. Use this option either to load target immediately into GUI or to provide the target for console mode.
+	-l, --language <CPP|PLSQL|JAVA|CS|VB|PHP|COBOL>:	Set target language (Default is C/C++).
+	-e, --extensions <ext1|ext2|ext3>:	Set file extensions to be analysed (See ReadMe or Options screen for language-specific defaults).
+	-i, --import <Filename>:	Import XML/CSV results to GUI.
+
+OUTPUT OPTIONS:
+	(Automagically export results to a file in the specified format. Use XML or CSV output if you wish to reload results into the GUI later on.)
+	-x, --export <Filename>:	Automatically export results to XML file.
+	-f, --csv-export <Filename>:	Automatically export results to CSV file.
+	-r, --results <Filename>:	Automatically export results to flat text file.
+
+CONSOLE OPTIONS:
+	-c, --console:		Run application in console only (hide GUI).
+	-v, --verbose:		Set console output to verbose mode.
+	-h, --help:		Show help.
+```
 
 Threat Intelligence
 ====================
