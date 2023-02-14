@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/100603074/210680535-40d8c113-2336-4417-bdb4-4825a7477164.png" height="300">
 </p> 
 
-This github repository contains a collection of **50+** **tools** and **resources** that can be useful for **blue teaming activities**. 
+This github repository contains a collection of **60+** **tools** and **resources** that can be useful for **blue teaming activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
 
@@ -118,12 +118,20 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Malware Detection and Analysis</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Malware Detection and Analysis</b> $\textcolor{gray}{\text{11 tools}}$</summary>
     <ul>
         <ul>
             <li><b><a href="#virustotal">VirusTotal</a></b><i> Malicious IOC Sharing Platform</i></li>
             <li><b><a href="#ida">IDA</a></b><i> Malware disassembler and debugger</i></li>
             <li><b><a href="#ghidra">Ghidra</a></b><i> Malware reverse engineering tool</i></li>
+            <li><b><a href="#decode-vbe">decode-vbe</a></b><i> Encoded VBE script decoder</i></li>
+            <li><b><a href="#pafish">pafish</a></b><i> Virtual machine sandbox detector</i></li>
+            <li><b><a href="#lookyloo">lookyloo</a></b><i> Phishing domain mapping</i></li>
+            <li><b><a href="#yara">YARA</a></b><i> Malware identification via pattern matching</i></li>
+            <li><b><a href="#cuckoo-sandbox">Cuckoo Sandbox</a></b><i> Malware analysis sandbox</i></li>
+            <li><b><a href="#radare2">Radare2</a></b><i> Reverse engineering framework</i></li>
+            <li><b><a href="#dnspy">dnSpy</a></b><i> .NET debugger and assembly editor</i></li>
+            <li><b><a href="#malware-traffic-analysisnet">malware-traffic-analysis.net</a></b><i> Malware and packet capture samples</i></li>
         </ul>
     </ul>
 </details>
@@ -1193,6 +1201,222 @@ There are several reasons why businesses need a ransomware response plan:
 ![image](https://user-images.githubusercontent.com/100603074/210655863-d4044516-022a-4f6b-afaa-cf375c1f01b4.png)
 
 *Image used from https://csrc.nist.gov/Projects/ransomware-protection-and-response*
+
+### [🔙](#tool-list)[decode-vbe](https://github.com/DidierStevens/DidierStevensSuite/blob/master/decode-vbe.py)
+
+Script Encoding was introduced by Microsoft (long ago) to prevent people from being able to read, understand and alter VBScript files. 
+
+Encoded scripts are unreadable but still able to execute, making it a popular mechanism with threat actors looking to hide their malicious code, IOCs, hardcoded C2 domains etc whilst still being able to achieve execution.
+
+The decode-vbe script can be used to convert encoded VBE files back to plaintext for analysis. 
+
+Nice blog about VBE files [here](https://bromiley.medium.com/malware-monday-vbscript-and-vbe-files-292252c1a16).
+
+**Install:** 
+
+```bash
+git clone https://github.com/DidierStevens/DidierStevensSuite/
+cd DidierStevensSuite
+```
+
+**Usage:** 
+
+```bash
+# Decode literal string
+decode-vbe.py "##@~^DgAAAA==\ko$K6,JCV^GJqAQAAA==^#~@"
+
+# Decode hexadecimal (prefix #h#)
+decode-vbe.py #h#23407E5E4467414141413D3D5C6B6F244B362C4A437F565E474A7141514141413D3D5E237E40
+
+# Decode base64 (prefix #b#)
+decode-vbe.py #b#I0B+XkRnQUFBQT09XGtvJEs2LEpDf1ZeR0pxQVFBQUE9PV4jfkA=
+```
+
+### [🔙](#tool-list)[pafish](https://github.com/a0rtega/pafish)
+
+Pafish is a testing tool that uses different techniques to detect virtual machines and malware analysis environments in the same way that malware families do.
+
+The project is free and open source; the code of all the anti-analysis techniques is publicly available. Pafish executables for Windows (x86 32-bit and 64-bit) can be downloaded from the [releases page](https://github.com/a0rtega/pafish/releases).
+
+**Install: (Build)** 
+
+Pafish is written in C and can be built with Mingw-w64 and make.
+
+The wiki page "[How to build](https://github.com/a0rtega/pafish/wiki/How-to-build)" contains detailed instructions.
+
+**Usage:** 
+
+```bash
+pafish.exe
+```
+![image](https://user-images.githubusercontent.com/100603074/218870623-4c149ec7-2002-42ea-9c24-0d35f562bb8c.png)
+
+*Image used from https://github.com/a0rtega/pafish*
+
+### [🔙](#tool-list)[lookyloo](https://github.com/Lookyloo/lookyloo)
+
+Lookyloo is a web interface that captures a webpage and then displays a tree of the domains, that call each other.
+
+Use Lookyloo to map the journey a website page takes - from entering the initial URL address to the various redirects to third-party affiliations. 
+
+**Install:** 
+
+```bash
+git clone https://github.com/Lookyloo/lookyloo.git
+cd lookyloo
+poetry install
+echo LOOKYLOO_HOME="'`pwd`'" > .env
+```
+
+Full installation instructions can be found [here](https://www.lookyloo.eu/docs/main/install-lookyloo.html).
+
+**Usage:** 
+
+Once installed and running, lookyloo can be operated via the web interface hosted locally.
+
+![image](https://user-images.githubusercontent.com/100603074/218870701-24d0b7c1-50d9-4b7d-9b9d-b76c98b4e10f.png)
+
+*Image used from https://www.lookyloo.eu/*
+
+### [🔙](#tool-list)[YARA](https://github.com/virustotal/yara)
+
+YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns. 
+
+Each description, a.k.a rule, consists of a set of strings and a boolean expression which determine its logic.
+
+**Install:** 
+
+```bash
+tar -zxf yara-4.2.0.tar.gz
+cd yara-4.2.0
+./bootstrap.sh
+sudo apt-get install automake libtool make gcc pkg-config
+git clone https://github.com/VirusTotal/yara
+cd yara
+./bootstrap.sh
+./configure
+make
+sudo make install
+```
+
+Full installation instructions can be found [here](https://yara.readthedocs.io/en/stable/gettingstarted.html#compiling-and-installing-yara).
+
+**Usage:** 
+
+```bash
+# Apply rule in /foo/bar/rules to all files in the current directory
+yara /foo/bar/rules  .
+
+# Scan all files in the /foo directory and its subdirectories:
+yara /foo/bar/rules -r /foo
+```
+
+Nice YARA cheatsheet [here](https://github.com/mattnotmax/DFIR-notes/blob/master/cheatsheet_yara.md).
+
+![image](https://user-images.githubusercontent.com/100603074/218871209-da726de1-1563-40b4-857c-3234f7415fdb.png)
+
+*Image used from https://virustotal.github.io/yara/*
+
+### [🔙](#tool-list)[Cuckoo Sandbox](https://cuckoosandbox.org/)
+
+Cuckoo is an open source automated malware analysis system.
+
+It’s used to automatically run and analyze files and collect comprehensive analysis results that outline what the malware does while running inside an isolated operating system.
+
+It can retrieve the following type of results:
+
+- Traces of calls performed by all processes spawned by the malware.
+- Files being created, deleted and downloaded by the malware during its execution.
+- Memory dumps of the malware processes.
+- Network traffic trace in PCAP format.
+- Screenshots taken during the execution of the malware.
+- Full memory dumps of the machines.
+
+**Install:** 
+
+For installation follow the docs [here](https://cuckoo.readthedocs.io/en/latest/installation/).
+
+**Usage:** 
+
+For usage follow the docs [here](https://cuckoo.readthedocs.io/en/latest/usage/).
+
+### [🔙](#tool-list)[radare2](https://github.com/radareorg/radare2)
+
+Radare2 provides a set of libraries, tools and plugins to ease reverse engineering tasks.
+
+r2 is a featureful low-level command-line tool with support for scripting. r2 can edit files on local hard drives, view kernel memory, and debug programs locally or via a remote gdb server. r2's wide architecture support allows you to analyze, emulate, debug, modify, and disassemble any binary.
+
+**Install:** 
+
+```bash
+git clone https://github.com/radareorg/radare2
+radare2/sys/install.sh
+```
+
+**Usage:** 
+
+```bash
+$ r2 /bin/ls   # open the binary in read-only mode
+> aaa          # same as r2 -A, analyse the binary
+> afl          # list all functions (try aflt, aflm)
+> px 32        # print 32 byte hexdump current block
+> s sym.main   # seek to the given offset (by flag name, number, ..)
+> f~foo        # filter flags with ~grep (same as |grep)
+> iS;is        # list sections and symbols (same as rabin2 -Ss)
+> pdf; agf     # print function and show control-flow-graph in ascii-art
+> oo+;w hello  # reopen in rw mode and write a string in the current offset
+> ?*~...       # interactive filter all command help messages
+> q            # quit
+```
+
+Great usage book [here](https://book.rada.re/).
+
+![image](https://user-images.githubusercontent.com/100603074/218871325-90800880-ee58-4a61-9372-fa9cb09f6bf3.png)
+
+*Image used from https://github.com/radareorg/radare2*
+
+### [🔙](#tool-list)[dnSpy](https://github.com/dnSpy/dnSpy)
+
+dnSpy is a debugger and .NET assembly editor. You can use it to edit and debug assemblies. 
+
+Main features:
+
+- Debug .NET and Unity assemblies
+- Edit .NET and Unity assemblies
+
+**Install: (Build)** 
+
+```bash
+git clone --recursive https://github.com/dnSpy/dnSpy.git
+cd dnSpy
+./build.ps1 -NoMsbuild
+```
+
+**Usage:** 
+
+```bash
+dnSpy.exe
+```
+
+Nice tutorial page [here](https://7d2dsdx.github.io/Tutorials/index.html?StartingdnSpy.html).
+
+![image](https://user-images.githubusercontent.com/100603074/218871411-7eb20cb7-f2e8-4d29-98a9-d5820a138c8e.png)
+
+*Image used from https://7d2dsdx.github.io/Tutorials/index.html?StartingdnSpy.html*
+
+### [🔙](#tool-list)[malware-traffic-analysis.net](https://www.malware-traffic-analysis.net/)
+
+This is a site with over 2,200 blog entries about malicious network traffic. Almost every post on the site has pcap files or malware samples (or both).
+
+The site also contains a number of traffic analysis exercises, including technical blog posts outlining techniques being used by threat actors.
+
+**Usage:** 
+
+Visit [https://www.malware-traffic-analysis.net/](https://www.malware-traffic-analysis.net/).
+
+![image](https://user-images.githubusercontent.com/100603074/218871486-f782e3f1-fcea-4e68-a99b-235146490b84.png)
+
+*Image used from https://www.malware-traffic-analysis.net/*
 
 Malware Detection and Analysis
 ====================
