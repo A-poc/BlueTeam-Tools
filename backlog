@@ -7,6 +7,7 @@ Vulnerability Management
   Lynis
   BugCrowd
 Security Monitoring
+  https://github.com/clong/DetectionLab
   OSquery + Kolide Fleet
   Splunk
   ElastAlert
