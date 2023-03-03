@@ -23,7 +23,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 # Tool List
 
 <details open>
-    <summary><b>Blue Team Tips</b> $\textcolor{gray}{\text{3 tips}}$</summary>
+    <summary><b>Blue Team Tips</b> 3 tips</summary>
     <ul>
         <ul>
             <li><b><a href="#payload-extraction-with-process-hacker">Payload extraction with Process Hacker</a></b><i> @embee_research</i></li>
@@ -34,7 +34,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Network Discovery and Mapping</b> $\textcolor{gray}{\text{6 tools}}$</summary>
+    <summary><b>Network Discovery and Mapping</b> 6 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#nmap">Nmap</a></b><i> Network scanner</i></li>
@@ -48,7 +48,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Vulnerability Management</b> $\textcolor{gray}{\text{4 tools}}$</summary>
+    <summary><b>Vulnerability Management</b> 4 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#openvas">OpenVAS</a></b><i> Open-source vulnerability scanner</i></li>
@@ -60,7 +60,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Security Monitoring</b> $\textcolor{gray}{\text{10 tools}}$</summary>
+    <summary><b>Security Monitoring</b> 10 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#sysmon">Sysmon</a></b><i> System Monitor for Windows</i></li>
@@ -78,7 +78,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Threat Tools and Techniques</b> $\textcolor{gray}{\text{10 tools}}$</summary>
+    <summary><b>Threat Tools and Techniques</b> 10 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
@@ -96,7 +96,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Threat Intelligence</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Threat Intelligence</b> 3 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#maltego">Maltego</a></b><i> Threat Intelligence Platform</i></li>
@@ -107,7 +107,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Incident Response Planning</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Incident Response Planning</b> 3 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#nist">NIST</a></b><i> Cybersecurity Framework</i></li>
@@ -118,7 +118,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Malware Detection and Analysis</b> $\textcolor{gray}{\text{11 tools}}$</summary>
+    <summary><b>Malware Detection and Analysis</b> 11 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#virustotal">VirusTotal</a></b><i> Malicious IOC Sharing Platform</i></li>
@@ -137,7 +137,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Data Recovery</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Data Recovery</b> 3 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#recuva">Recuva</a></b><i> File recovery</i></li>
@@ -148,7 +148,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Digital Forensics</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Digital Forensics</b> 3 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#sans-sift">SANS SIFT</a></b><i> Forensic toolkit</i></li>
@@ -159,7 +159,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Security Awareness Training</b> $\textcolor{gray}{\text{3 tools}}$</summary>
+    <summary><b>Security Awareness Training</b> 3 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#tryhackme">TryHackMe</a></b><i> Cyber security challenges platform</i></li>
@@ -170,7 +170,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Communication and Collaboration</b> $\textcolor{gray}{\text{2 tools}}$</summary>
+    <summary><b>Communication and Collaboration</b> 2 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#twitter">Twitter</a></b><i> Cyber Security Accounts</i></li>
