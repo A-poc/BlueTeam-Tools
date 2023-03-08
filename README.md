@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/100603074/210680535-40d8c113-2336-4417-bdb4-4825a7477164.png" height="300">
 </p> 
 
-This github repository contains a collection of **60+** **tools** and **resources** that can be useful for **blue teaming activities**. 
+This github repository contains a collection of **65+** **tools** and **resources** that can be useful for **blue teaming activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
 
@@ -23,12 +23,13 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 # Tool List
 
 <details open>
-    <summary><b>Blue Team Tips</b> 3 tips</summary>
+    <summary><b>Blue Team Tips</b> 4 tips</summary>
     <ul>
         <ul>
             <li><b><a href="#payload-extraction-with-process-hacker">Payload extraction with Process Hacker</a></b><i> @embee_research</i></li>
             <li><b><a href="#prevent-script-execution-via-double-click">Prevent Script Execution via Double Click</a></b><i> Default Application GPO Change</i></li>
             <li><b><a href="#detect-cryptojacking-malware-with-proxy-logs">Detect Cryptojacking Malware with Proxy Logs</a></b><i> Dave Mckay</i></li>
+            <li><b><a href="#remove-null-bytes-in-cyberchef-malware-analysis">Remove null bytes in CyberChef malware analysis</a></b><i> @Securityinbits</i></li>
         </ul>
     </ul>
 </details>
@@ -78,7 +79,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Threat Tools and Techniques</b> 10 tools</summary>
+    <summary><b>Threat Tools and Techniques</b> 11 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
@@ -91,28 +92,32 @@ Some of the tools may be specifically designed for blue teaming, while others ar
             <li><b><a href="#yargen">yarGen</a></b><i> YARA rule generator</i></li>
             <li><b><a href="#emailanalyzer">EmailAnalyzer</a></b><i> Suspicious emails analyser</i></li>
             <li><b><a href="#vcg">VCG</a></b><i> Code security scanning tool</i></li>
+            <li><b><a href="#cyberchef">CyberChef</a></b><i> GCHQ online data manipulation platform</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Threat Intelligence</b> 3 tools</summary>
+    <summary><b>Threat Intelligence</b> 4 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#maltego">Maltego</a></b><i> Threat Intelligence Platform</i></li>
             <li><b><a href="#misp">MISP</a></b><i> Malware Information Sharing Platform</i></li>
             <li><b><a href="#threatconnect">ThreatConnect</a></b><i> Threat data aggregation</i></li>
+            <li><b><a href="#adversary-emulation-library">Adversary Emulation Library</a></b><i> An open library of adversary emulation plans</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Incident Response Planning</b> 3 tools</summary>
+    <summary><b>Incident Response Planning</b> 5 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#nist">NIST</a></b><i> Cybersecurity Framework</i></li>
             <li><b><a href="#incident-response-plan">Incident Response Plan</a></b><i> Framework for incident response</i></li>
             <li><b><a href="#ransomware-response-plan">Ransomware Response Plan</a></b><i> Framework for ransomware response</i></li>
+            <li><b><a href="#incident-response-reference-guide">Incident Response Reference Guide</a></b><i> Incident preparation guidance paper</i></li>
+            <li><b><a href="#awesome-incident-response">Awesome Incident Response</a></b><i> List of tools for incident response</i></li>
         </ul>
     </ul>
 </details>
@@ -208,12 +213,21 @@ Blue Team Tips
 
 ### [🔙](#tool-list)Detect Cryptojacking Malware with Proxy Logs
 
-**Description:** 
-*Cryptojacking malware is becoming more suffisticated, with mining malware leveraging DLL sideloading to hide on machine and reducing CPU load to stay below detection thresholds. One thing they all have in common is they have to make connections to mining pools, this is where we can find them. Monitor your proxy and DNS logs for connections containing common mining pool strings (e.g `*xmr.*` OR `*pool.com` OR `*pool.org` OR `pool.*`).*
+**Description:** *Cryptojacking malware is becoming more suffisticated, with mining malware leveraging DLL sideloading to hide on machine and reducing CPU load to stay below detection thresholds. One thing they all have in common is they have to make connections to mining pools, this is where we can find them. Monitor your proxy and DNS logs for connections containing common mining pool strings (e.g `*xmr.*` OR `*pool.com` OR `*pool.org` OR `pool.*`).*
 
 **Credit:** [Dave Mckay](https://www.howtogeek.com/author/davidmckay/)
 
 **Link:** [Blog](https://www.howtogeek.com/devops/how-to-detect-and-defeat-cryptominers-in-your-network/)
+
+### [🔙](#tool-list)Remove null bytes in CyberChef malware analysis
+
+![image](https://user-images.githubusercontent.com/100603074/223865015-00128d71-0093-4422-b271-e26dac723013.png)
+
+**Description:** *'After decoding base64 for Unicode string during malware analysis, you may encounter null bytes. Keep your code readable by using the "Remove null bytes" operation in CyberChef'.*
+
+**Credit:** [Ayush Anand](https://twitter.com/Securityinbits)
+
+**Link:** [Twitter](https://twitter.com/securityinbits/status/1628364983661694976)
 
 Network Discovery and Mapping
 ====================
@@ -1037,6 +1051,20 @@ CONSOLE OPTIONS:
 	-h, --help:		Show help.
 ```
 
+### [🔙](#tool-list)[CyberChef](https://gchq.github.io/CyberChef/)
+
+CyberChef is a free, web-based tool that allows users to manipulate and transform data using a wide range of techniques.
+
+With CyberChef, you can perform a wide range of operations on data, such as converting between different data formats (e.g., hexadecimal, base64, ASCII), encoding and decoding data, searching and replacing text etc.
+
+The tool also includes a recipe system, which allows you to save and share data manipulation workflows with others.
+
+The tool can be used from [here](https://gchq.github.io/CyberChef/).
+
+![image](https://user-images.githubusercontent.com/100603074/223865168-433fcd56-12e9-44a2-83aa-1531d711383d.png)
+
+*Image used from https://gchq.github.io/CyberChef/*
+
 Threat Intelligence
 ====================
 
@@ -1106,6 +1134,26 @@ You can request a demo from [here](https://threatconnect.com/request-a-demo/).
 ![image](https://user-images.githubusercontent.com/100603074/210655770-4413ead0-6216-47fe-a933-cbe0be9f86a1.png)
 
 *Image used from https://threatconnect.com/threat-intelligence-platform/*
+
+### [🔙](#tool-list)[Adversary Emulation Library](https://github.com/center-for-threat-informed-defense/adversary_emulation_library)
+
+This is a library of adversary emulation plans to enable you to evaluate your defensive capabilities against real-world threats.
+
+Emulation plans are an essential component for organizations looking to prioritize defenses against behavior from specific threats.
+
+The TTPs outlined in this resource can be used to design specific threat emulation activities to test your organisations defenses against specific threat actors.
+
+Visit the resource [here](https://github.com/center-for-threat-informed-defense/adversary_emulation_library).
+
+**Example (sandworm)**
+
+- [Sandworm Emulated Software Source Code](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/sandworm/Resources)
+- [Sandworm Detection Scenario Walkthrough](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/sandworm/Emulation_Plan/Scenario_1)
+- [Sandworm Intelligence Summary](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/sandworm/Intelligence_Summary/Intelligence_Summary.md)
+
+![image](https://user-images.githubusercontent.com/100603074/223865356-c4d491c3-edba-40d6-80b2-5c41029bddfd.png)
+
+*Image used from https://github.com/center-for-threat-informed-defense/adversary_emulation_library*
 
 Incident Response Planning
 ====================
@@ -1201,6 +1249,145 @@ There are several reasons why businesses need a ransomware response plan:
 ![image](https://user-images.githubusercontent.com/100603074/210655863-d4044516-022a-4f6b-afaa-cf375c1f01b4.png)
 
 *Image used from https://csrc.nist.gov/Projects/ransomware-protection-and-response*
+
+### [🔙](#tool-list)[Incident Response Reference Guide](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-emergency-doc-digital.pdf)
+
+This is a “first aid” style of guidance for cybersecurity to help you prepare for a crisis and limit the potential damage in a crisis.
+
+This includes tips and guidance for technical, operational, legal, and communications aspects of a major cybersecurity incident. 
+
+**Key Takeaways**
+
+- **Preparation pays off** – Preparing for a major incident can reduce damage to the organization, as well as reduce incident cost and management difficulty.
+- **Operationalize your incident management processes** – Managing major cybersecurity incidents must be part of standard business risk management processes.
+- **Coordination is critical** – Effective cybersecurity incident management requires collaboration and coordination of technical, operations, communications, legal, and governance functions.
+- **Stay calm and do no harm in an incident** – Overreacting can be as damaging as underreacting.
+
+You can read the paper [here](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-emergency-doc-digital.pdf).
+
+![image](https://user-images.githubusercontent.com/100603074/223865803-a026ad87-00dd-4458-bf17-416a091566dd.png)
+
+*Image used from https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-emergency-doc-digital.pdf*
+
+### [🔙](#tool-list)[Awesome Incident Response](https://github.com/meirwah/awesome-incident-response)
+
+A curated list of tools and resources for security incident response, aimed to help security analysts and [DFIR](https://www.acronymfinder.com/Digital-Forensics%2c-Incident-Response-%28DFIR%29.html) teams.
+
+This is a great resource full of links for different aspects of incident response, including:
+
+- Adversary Emulation
+- All-In-One Tools
+- Books
+- Communities
+- Disk Image Creation Tools
+
+Visit the resource [here](https://github.com/meirwah/awesome-incident-response).
+
+![image](https://user-images.githubusercontent.com/100603074/223865479-b54a2f98-0c2c-4bf1-8072-58ea7bfe4fb0.png)
+
+*Image used from https://github.com/meirwah/awesome-incident-response*
+
+Malware Detection and Analysis
+====================
+
+*Tools for detecting and analyzing malware, including antivirus software and forensic analysis tools.*
+
+### [🔙](#tool-list)[VirusTotal](https://www.virustotal.com/gui/home/search)
+
+VirusTotal is a website and cloud-based tool that analyzes and scans files, URLs, and software for viruses, worms, and other types of malware.
+
+When a file, URL, or software is submitted to VirusTotal, the tool uses various antivirus engines and other tools to scan and analyze it for malware. It then provides a report with the results of the analysis, which can help security professionals and blue teams identify and respond to potential threats. 
+
+VirusTotal can also be used to check the reputation of a file or URL, and to monitor for malicious activity on a network.
+
+Visit [https://www.virustotal.com/gui/home/search](https://www.virustotal.com/gui/home/search)
+
+**Usage:** 
+
+```bash
+# Recently created documents with macros embedded, detected at least by 5 AVs
+(type:doc OR type: docx) tag:macros p:5+ generated:30d+
+
+# Excel files bundled with powershell scripts and uploaded to VT for the last 10
+days
+(type:xls OR type:xlsx) tag:powershell fs:10d+
+
+# Follina-like exploit payloads
+entity:file magic:"HTML document text" tag:powershell have:itw_url
+
+# URLs related to specified parent domain/subdomain with a specific header in
+the response
+entity:url header_value:"Apache/2.4.41 (Ubuntu)" parent_domain:domain.org
+
+# Suspicious URLs with a specific HTML title
+entity:url ( title:"XY Company" or title:"X.Y. Company" or title:"XYCompany" ) p:5+
+```
+
+Full documentation can be found [here](https://support.virustotal.com/hc/en-us/categories/360000162878-Documentation).
+
+[VT INTELLIGENCE CHEAT SHEET](https://storage.googleapis.com/vtpublic/reports/VTI%20Cheatsheet.pdf)
+
+![image](https://user-images.githubusercontent.com/100603074/210655958-9a39783e-637e-46a3-a80c-4c64b389de60.png)
+
+*Image used from https://www.virustotal.com/gui/home/search*
+
+### [🔙](#tool-list)[IDA](https://hex-rays.com/ida-free/)
+
+IDA (Interactive Disassembler) is a powerful tool used to reverse engineer and analyze compiled and executable code. 
+
+It can be used to examine the inner workings of software, including malware, and to understand how it functions. IDA allows users to disassemble code, decompile it into a higher-level programming language, and view and edit the resulting source code. This can be useful for identifying vulnerabilities, analyzing malware, and understanding how a program works. 
+
+IDA can also be used to generate graphs and charts that visualize the structure and flow of code, which can make it easier to understand and analyze.
+
+**Install:** 
+
+Download IDA from [here](https://hex-rays.com/ida-free/#download).
+
+**Usage:** 
+
+[IDA Practical Cheatsheet](https://github.com/AdamTaguirov/IDA-practical-cheatsheet)
+
+[IDAPython cheatsheet](https://gist.github.com/icecr4ck/7a7af3277787c794c66965517199fc9c)
+
+[IDA Pro Cheatsheet](https://hex-rays.com/products/ida/support/freefiles/IDA_Pro_Shortcuts.pdf)
+
+![image](https://user-images.githubusercontent.com/100603074/210655977-e52a66eb-7698-4769-b002-a9d6f1503b85.png)
+
+*Image used from https://www.newton.com.tw/wiki/IDA%20Pro*
+
+### [🔙](#tool-list)[Ghidra](https://ghidra-sre.org/)
+
+Ghidra is a free, open-source software reverse engineering tool developed by the National Security Agency (NSA). It is used to analyze compiled and executable code, including malware. 
+
+Ghidra allows users to disassemble code, decompile it into a higher-level programming language, and view and edit the resulting source code. This can be useful for identifying vulnerabilities, analyzing malware, and understanding how a program works. 
+
+Ghidra also includes a range of features and tools that support SRE tasks, such as debugging, code graphing, and data visualization. Ghidra is written in Java and is available for Windows, MacOS, and Linux.
+
+**Install:** 
+
+1. Download the latest release from [here](https://github.com/NationalSecurityAgency/ghidra/releases).
+2. Extract the zip
+
+Full installation and error fix information can be found [here](https://ghidra-sre.org/InstallationGuide.html#Install).
+
+**Usage:** 
+
+1. Navigate to the unzipped folder
+
+```bash
+# Windows
+ghidraRun.bat
+
+# Linux
+./ghidraRun
+```
+
+If Ghidra failed to launch, see the [Troubleshooting](https://ghidra-sre.org/InstallationGuide.html#Troubleshooting) link.
+
+![image](https://user-images.githubusercontent.com/100603074/210656000-9b31d5fc-7b95-447e-94ed-94aef602de46.png)
+
+*Image used from https://www.malwaretech.com/2019/03/video-first-look-at-ghidra-nsa-reverse-engineering-tool.html*
+
 
 ### [🔙](#tool-list)[decode-vbe](https://github.com/DidierStevens/DidierStevensSuite/blob/master/decode-vbe.py)
 
@@ -1417,107 +1604,6 @@ Visit [https://www.malware-traffic-analysis.net/](https://www.malware-traffic-an
 ![image](https://user-images.githubusercontent.com/100603074/218871486-f782e3f1-fcea-4e68-a99b-235146490b84.png)
 
 *Image used from https://www.malware-traffic-analysis.net/*
-
-Malware Detection and Analysis
-====================
-
-*Tools for detecting and analyzing malware, including antivirus software and forensic analysis tools.*
-
-### [🔙](#tool-list)[VirusTotal](https://www.virustotal.com/gui/home/search)
-
-VirusTotal is a website and cloud-based tool that analyzes and scans files, URLs, and software for viruses, worms, and other types of malware.
-
-When a file, URL, or software is submitted to VirusTotal, the tool uses various antivirus engines and other tools to scan and analyze it for malware. It then provides a report with the results of the analysis, which can help security professionals and blue teams identify and respond to potential threats. 
-
-VirusTotal can also be used to check the reputation of a file or URL, and to monitor for malicious activity on a network.
-
-Visit [https://www.virustotal.com/gui/home/search](https://www.virustotal.com/gui/home/search)
-
-**Usage:** 
-
-```bash
-# Recently created documents with macros embedded, detected at least by 5 AVs
-(type:doc OR type: docx) tag:macros p:5+ generated:30d+
-
-# Excel files bundled with powershell scripts and uploaded to VT for the last 10
-days
-(type:xls OR type:xlsx) tag:powershell fs:10d+
-
-# Follina-like exploit payloads
-entity:file magic:"HTML document text" tag:powershell have:itw_url
-
-# URLs related to specified parent domain/subdomain with a specific header in
-the response
-entity:url header_value:"Apache/2.4.41 (Ubuntu)" parent_domain:domain.org
-
-# Suspicious URLs with a specific HTML title
-entity:url ( title:"XY Company" or title:"X.Y. Company" or title:"XYCompany" ) p:5+
-```
-
-Full documentation can be found [here](https://support.virustotal.com/hc/en-us/categories/360000162878-Documentation).
-
-[VT INTELLIGENCE CHEAT SHEET](https://storage.googleapis.com/vtpublic/reports/VTI%20Cheatsheet.pdf)
-
-![image](https://user-images.githubusercontent.com/100603074/210655958-9a39783e-637e-46a3-a80c-4c64b389de60.png)
-
-*Image used from https://www.virustotal.com/gui/home/search*
-
-### [🔙](#tool-list)[IDA](https://hex-rays.com/ida-free/)
-
-IDA (Interactive Disassembler) is a powerful tool used to reverse engineer and analyze compiled and executable code. 
-
-It can be used to examine the inner workings of software, including malware, and to understand how it functions. IDA allows users to disassemble code, decompile it into a higher-level programming language, and view and edit the resulting source code. This can be useful for identifying vulnerabilities, analyzing malware, and understanding how a program works. 
-
-IDA can also be used to generate graphs and charts that visualize the structure and flow of code, which can make it easier to understand and analyze.
-
-**Install:** 
-
-Download IDA from [here](https://hex-rays.com/ida-free/#download).
-
-**Usage:** 
-
-[IDA Practical Cheatsheet](https://github.com/AdamTaguirov/IDA-practical-cheatsheet)
-
-[IDAPython cheatsheet](https://gist.github.com/icecr4ck/7a7af3277787c794c66965517199fc9c)
-
-[IDA Pro Cheatsheet](https://hex-rays.com/products/ida/support/freefiles/IDA_Pro_Shortcuts.pdf)
-
-![image](https://user-images.githubusercontent.com/100603074/210655977-e52a66eb-7698-4769-b002-a9d6f1503b85.png)
-
-*Image used from https://www.newton.com.tw/wiki/IDA%20Pro*
-
-### [🔙](#tool-list)[Ghidra](https://ghidra-sre.org/)
-
-Ghidra is a free, open-source software reverse engineering tool developed by the National Security Agency (NSA). It is used to analyze compiled and executable code, including malware. 
-
-Ghidra allows users to disassemble code, decompile it into a higher-level programming language, and view and edit the resulting source code. This can be useful for identifying vulnerabilities, analyzing malware, and understanding how a program works. 
-
-Ghidra also includes a range of features and tools that support SRE tasks, such as debugging, code graphing, and data visualization. Ghidra is written in Java and is available for Windows, MacOS, and Linux.
-
-**Install:** 
-
-1. Download the latest release from [here](https://github.com/NationalSecurityAgency/ghidra/releases).
-2. Extract the zip
-
-Full installation and error fix information can be found [here](https://ghidra-sre.org/InstallationGuide.html#Install).
-
-**Usage:** 
-
-1. Navigate to the unzipped folder
-
-```bash
-# Windows
-ghidraRun.bat
-
-# Linux
-./ghidraRun
-```
-
-If Ghidra failed to launch, see the [Troubleshooting](https://ghidra-sre.org/InstallationGuide.html#Troubleshooting) link.
-
-![image](https://user-images.githubusercontent.com/100603074/210656000-9b31d5fc-7b95-447e-94ed-94aef602de46.png)
-
-*Image used from https://www.malwaretech.com/2019/03/video-first-look-at-ghidra-nsa-reverse-engineering-tool.html*
 
 Data Recovery
 ====================
