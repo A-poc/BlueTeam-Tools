@@ -1,5 +1,5 @@
 Blue Team Tips
-  https://twitter.com/securityinbits/status/1628364983661694976
+-
 Network Discovery and Mapping
 -
 Vulnerability Management
@@ -12,16 +12,12 @@ Security Monitoring
   Splunk
   ElastAlert
 Threat Tools and Techniques
-  https://github.com/center-for-threat-informed-defense/adversary_emulation_library
-  https://gchq.github.io/CyberChef/
   https://github.com/PowerShell/JEA
   https://github.com/Cyber-Buddy/APKHunt
 Threat Intelligence
   ThreatCrowd
   OTX AlienVault
 Incident Response Planning
-  https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-emergency-doc-digital.pdf
-  https://github.com/meirwah/awesome-incident-response
   Business Continuity Plan
   Insider Threat Response Plan
   Physical Security Plan
