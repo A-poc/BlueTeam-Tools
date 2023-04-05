@@ -7,6 +7,7 @@ Vulnerability Management
   Lynis
   BugCrowd
 Security Monitoring
+  Canary Tokens https://www.canarytokens.org/generate
   https://github.com/clong/DetectionLab
   OSquery + Kolide Fleet
   Splunk
