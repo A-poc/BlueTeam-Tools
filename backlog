@@ -13,6 +13,7 @@ Security Monitoring
   Splunk
   ElastAlert
 Threat Tools and Techniques
+  https://github.com/last-byte/PersistenceSniper
   https://github.com/PowerShell/JEA
   https://github.com/Cyber-Buddy/APKHunt
 Threat Intelligence
