@@ -1869,7 +1869,7 @@ Some great accounts to follow:
 - [@_JohnHammond](https://twitter.com/_JohnHammond)
 - [@mrd0x](https://twitter.com/mrd0x)
 - [@TheHackersNews](https://twitter.com/TheHackersNews)
-- [@pancak3stack](https://twitter.com/pancak3stack)
+- [@pancak3lullz](https://twitter.com/pancak3lullz)
 - [@GossiTheDog](https://twitter.com/GossiTheDog)
 - [@briankrebs](https://twitter.com/briankrebs)
 - [@SwiftOnSecurity](https://twitter.com/SwiftOnSecurity)
