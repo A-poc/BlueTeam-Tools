@@ -169,6 +169,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
         <ul>
             <li><b><a href="#tryhackme">TryHackMe</a></b><i> Cyber security challenges platform</i></li>
             <li><b><a href="#hackthebox">HackTheBox</a></b><i> Cyber security challenges platform</i></li>
+            <li><b><a href="#cyberdefenders">CyberDefenders</a></b><i> Blue team cyber security challenges platform</i></li>
             <li><b><a href="#phishme">PhishMe</a></b><i> Phishing training</i></li>
         </ul>
     </ul>
@@ -1828,6 +1829,24 @@ Visit [https://app.hackthebox.com/login](https://app.hackthebox.com/login) and c
 ![image](https://user-images.githubusercontent.com/100603074/210669087-d00d76d1-300f-48c9-8f7f-4b9b5157626e.png)
 
 *Image used from https://www.hackthebox.com/login*
+
+### [🔙](#tool-list)[CyberDefenders](https://cyberdefenders.org/)
+
+CyberDefenders is a dedicated platform designed for blue team professionals to enhance their cyber security skills.
+
+The platform provides real-world blue team labs that cover a broad range of disciplines. Participants are encouraged to apply their knowledge in areas such as incident response, digital forensics, and threat hunting to navigate through these scenarios.
+
+The goal is to offer a practical learning environment that mirrors the complexities that defenders encounter in Security Operations Centers.
+
+Visit [https://cyberdefenders.org/](https://cyberdefenders.org/) and create an account.
+
+**Useful links:** 
+
+[Blue Team Labs](https://cyberdefenders.org/blue-team-labs/)
+
+[Certified CyberDefender Certification](https://cyberdefenders.org/blue-team-training/courses/certified-cyberdefender-certification/)
+
+![image](https://github.com/ahmedkhalidali/BlueTeam-Tools/assets/30199198/fe2ef3c9-d8a9-4a82-91c8-d93487df3afb)
 
 ### [🔙](#tool-list)[PhishMe](https://cofense.com/product-services/phishme/)
 
