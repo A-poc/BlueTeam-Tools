@@ -164,7 +164,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Security Awareness Training</b> 3 tools</summary>
+    <summary><b>Security Awareness Training</b> 4 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#tryhackme">TryHackMe</a></b><i> Cyber security challenges platform</i></li>
