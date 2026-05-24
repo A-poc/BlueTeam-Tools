@@ -1126,6 +1126,10 @@ ThreatConnect is a threat intelligence platform that helps organizations aggrega
 
 The platform includes a range of features for collecting, analyzing, and disseminating threat intelligence, such as a customizable dashboard, integration with third-party data sources, and the ability to create custom reports and alerts.
 
+### [🔙](#tool-list)[CVE PoC Search](https://labs.jamessawyer.co.uk/cves/)
+
+CVE PoC Search is a public search portal for locating GitHub proof-of-concept repositories by CVE identifier. It indexes more than 30,000 CVEs and updates daily, making it useful for triage, validation, and threat investigation workflows.
+
 It is intended to help organizations improve their security posture by providing them with the information they need to identify, prioritize, and respond to potential threats.
 
 You can request a demo from [here](https://threatconnect.com/request-a-demo/).
