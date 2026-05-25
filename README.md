@@ -74,6 +74,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
             <li><b><a href="#procfilter">procfilter</a></b><i> YARA-integrated process denial framework</i></li>
             <li><b><a href="#velociraptor">velociraptor</a></b><i> Endpoint visibility and collection tool</i></li>
             <li><b><a href="#sysmonsearch">SysmonSearch</a></b><i> Sysmon event log visualisation</i></li>
+            <li><b><a href="#krawl">Krawl</a></b><i> Web honeypot and anti-crawler</i></li>
         </ul>
     </ul>
 </details>
@@ -791,6 +792,16 @@ Full installation instructions can be found [here](https://github.com/JPCERTCC/S
 ![image](https://user-images.githubusercontent.com/100603074/218200383-84e4c9f4-3e34-4973-b37c-a9160a74b5e0.png)
 
 *Image used from https://blogs.jpcert.or.jp/ja/2018/09/SysmonSearch.html*
+
+### [🔙](#tool-list)[Krawl](https://github.com/BlessedRebuS/Krawl)
+
+Krawl is a modern, customizable web honeypot and deception server designed to detect and track malicious activity from attackers, web crawlers, and automated scanners. It creates realistic fake web applications with deceptive pages, fake credentials, honeypot paths, and canary token integration to attract and identify suspicious behavior.
+
+Krawl also includes AI-generated deception pages, spider trap pages, fake login portals, IP reputation analysis, and a real-time dashboard for monitoring suspicious activity. It can be deployed in standalone mode with SQLite or in scalable mode with PostgreSQL and Redis.
+
+**Install:** 
+
+You can find installation and deployment instructions [here](https://github.com/BlessedRebuS/Krawl).
 
 Threat Tools and Techniques
 ====================
