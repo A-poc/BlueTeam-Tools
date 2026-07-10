@@ -1,21 +1,17 @@
 Blue Team Tips
-  Recover metadata from PDF files (https://twitter.com/flakpaket/status/1654617325520433152)
+  -
 Threat Hunting
   https://github.com/SecurityRiskAdvisors/VECTR
 Network Discovery and Mapping
   https://github.com/nsacyber/GRASSMARLIN
 Vulnerability Management
-  Qualys
-  Lynis
   BugCrowd
 Security Monitoring
-  Canary Tokens https://www.canarytokens.org/generate
   https://github.com/clong/DetectionLab
   OSquery + Kolide Fleet
   Splunk
   ElastAlert
 Threat Tools and Techniques
-  https://github.com/last-byte/PersistenceSniper
   https://github.com/PowerShell/JEA
   https://github.com/Cyber-Buddy/APKHunt
   https://github.com/Neo23x0/Loki
