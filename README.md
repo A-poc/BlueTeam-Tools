@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/100603074/210680535-40d8c113-2336-4417-bdb4-4825a7477164.png" height="300">
 </p> 
 
-This github repository contains a collection of **65+** **tools** and **resources** that can be useful for **blue teaming activities**. 
+This github repository contains a collection of **70+** **tools** and **resources** that can be useful for **blue teaming activities**. 
 
 Some of the tools may be specifically designed for blue teaming, while others are more general-purpose and can be adapted for use in a blue teaming context.
 
@@ -23,13 +23,14 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 # Tool List
 
 <details open>
-    <summary><b>Blue Team Tips</b> 4 tips</summary>
+    <summary><b>Blue Team Tips</b> 5 tips</summary>
     <ul>
         <ul>
             <li><b><a href="#payload-extraction-with-process-hacker">Payload extraction with Process Hacker</a></b><i> @embee_research</i></li>
             <li><b><a href="#prevent-script-execution-via-double-click">Prevent Script Execution via Double Click</a></b><i> Default Application GPO Change</i></li>
             <li><b><a href="#detect-cryptojacking-malware-with-proxy-logs">Detect Cryptojacking Malware with Proxy Logs</a></b><i> Dave Mckay</i></li>
             <li><b><a href="#remove-null-bytes-in-cyberchef-malware-analysis">Remove null bytes in CyberChef malware analysis</a></b><i> @Securityinbits</i></li>
+            <li><b><a href="#recover-scrubbed-metadata-from-a-pdf">Recover scrubbed metadata from a PDF</a></b><i> @flakpaket</i></li>
         </ul>
     </ul>
 </details>
@@ -49,19 +50,20 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Vulnerability Management</b> 4 tools</summary>
+    <summary><b>Vulnerability Management</b> 5 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#openvas">OpenVAS</a></b><i> Open-source vulnerability scanner</i></li>
             <li><b><a href="#nessus-essentials">Nessus Essentials</a></b><i> Vulnerability scanner</i></li>
             <li><b><a href="#nexpose">Nexpose</a></b><i> Vulnerability management tool</i></li>
             <li><b><a href="#hackerone">HackerOne</a></b><i> Bug Bounty Management Platform</i></li>
+            <li><b><a href="#lynis">Lynis</a></b><i> Security auditing tool for Linux, macOS, and UNIX</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Security Monitoring</b> 10 tools</summary>
+    <summary><b>Security Monitoring</b> 11 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#sysmon">Sysmon</a></b><i> System Monitor for Windows</i></li>
@@ -74,12 +76,13 @@ Some of the tools may be specifically designed for blue teaming, while others ar
             <li><b><a href="#procfilter">procfilter</a></b><i> YARA-integrated process denial framework</i></li>
             <li><b><a href="#velociraptor">velociraptor</a></b><i> Endpoint visibility and collection tool</i></li>
             <li><b><a href="#sysmonsearch">SysmonSearch</a></b><i> Sysmon event log visualisation</i></li>
+            <li><b><a href="#canary-tokens">Canary Tokens</a></b><i> Deception honeypot documents</i></li>
         </ul>
     </ul>
 </details>
 
 <details open>
-    <summary><b>Threat Tools and Techniques</b> 11 tools</summary>
+    <summary><b>Threat Tools and Techniques</b> 12 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
@@ -93,6 +96,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
             <li><b><a href="#emailanalyzer">EmailAnalyzer</a></b><i> Suspicious emails analyser</i></li>
             <li><b><a href="#vcg">VCG</a></b><i> Code security scanning tool</i></li>
             <li><b><a href="#cyberchef">CyberChef</a></b><i> GCHQ online data manipulation platform</i></li>
+            <li><b><a href="#persistencesniper">PersistenceSniper</a></b><i> Find implants on Windows machines</i></li>
         </ul>
     </ul>
 </details>
@@ -164,13 +168,14 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Security Awareness Training</b> 4 tools</summary>
+    <summary><b>Security Awareness Training</b> 5 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#tryhackme">TryHackMe</a></b><i> Cyber security challenges platform</i></li>
             <li><b><a href="#hackthebox">HackTheBox</a></b><i> Cyber security challenges platform</i></li>
             <li><b><a href="#cyberdefenders">CyberDefenders</a></b><i> Blue team cyber security challenges platform</i></li>
             <li><b><a href="#phishme">PhishMe</a></b><i> Phishing training</i></li>
+            <li><b><a href="#kc7cyber">kc7cyber</a></b><i> Gamified cybersecurity training platform</i></li>
         </ul>
     </ul>
 </details>
@@ -230,6 +235,17 @@ Blue Team Tips
 
 **Link:** [Twitter](https://twitter.com/securityinbits/status/1628364983661694976)
 
+### [🔙](#tool-list)Recover scrubbed metadata from a PDF
+
+![image](https://github.com/user-attachments/assets/b015158a-01c6-42fe-993c-1bf667ad5469)
+
+**Description:** *Did you know you can recover scrubbed metadata from a PDF that wasn't scrubbed properly? The changes are incremental, and the history is stored in the PDF. This command removes the "updates" to the PDF metadata:*
+
+`exiftool -PDF-update:all= file.pdf`
+
+**Credit:** [Jon Gorenflo](https://twitter.com/flakpaket)
+
+**Link:** [Twitter](https://twitter.com/securityinbits/status/1628364983661694976)
 Network Discovery and Mapping
 ====================
 
@@ -519,6 +535,31 @@ HackerOne also offer initial triage and management of external bug reports from 
 
 *Image used from https://www.hackerone.com/product/bug-bounty-platform*
 
+### [🔙](#tool-list)[Lynis](https://github.com/cisofy/lynis)
+
+Lynis is a security auditing tool for Linux, macOS, and UNIX-based systems. It assists with compliance testing (HIPAA/ISO27001/PCI DSS) and system hardening.
+
+It performs an in-depth security scan and runs on the system itself. The primary goal is to test security defenses and provide tips for further system hardening. It will also scan for general system information, vulnerable software packages, and possible configuration issues.
+
+**Install:** 
+
+```bash
+ git clone https://github.com/CISOfy/lynis
+```
+
+For detailed installation instructions see [here](https://github.com/cisofy/lynis#installation).
+
+**Usage:** 
+```bash
+ cd lynis && ./lynis audit system
+```
+
+Documentation can be found [here](https://cisofy.com/documentation/lynis/).
+
+![image](https://github.com/user-attachments/assets/ab8567dd-db52-43f8-8111-7ee7373acceb)
+
+*Image used from https://cisofy.com/lynis/*
+
 Security Monitoring
 ====================
 
@@ -791,6 +832,26 @@ Full installation instructions can be found [here](https://github.com/JPCERTCC/S
 ![image](https://user-images.githubusercontent.com/100603074/218200383-84e4c9f4-3e34-4973-b37c-a9160a74b5e0.png)
 
 *Image used from https://blogs.jpcert.or.jp/ja/2018/09/SysmonSearch.html*
+
+### [🔙](#tool-list)[Canary Tokens](https://canarytokens.org/nest/)
+
+Canarytokens are like motion sensors for your networks, computers and clouds. You can put them in folders, on network devices and on your phones.
+
+Place them where nobody should be poking around and get a clear alarm if they are accessed. They are designed to look juicy to attackers to increase the likelihood that they are opened (and they are completely free).
+
+**Install:** 
+
+Visit the [token page](https://canarytokens.org/nest/) and choose from a list of tokens.
+
+**Usage:** 
+
+Add an email address to receive token alerts and then wait!
+
+Full usage information and examples can be found [here](https://docs.canarytokens.org/guide/examples.html).
+
+![image](https://github.com/user-attachments/assets/932339e7-7a57-4b7d-b545-c01fde3e87d9)
+
+*Image used from https://canarytokens.org/nest/*
 
 Threat Tools and Techniques
 ====================
@@ -1065,6 +1126,46 @@ The tool can be used from [here](https://gchq.github.io/CyberChef/).
 ![image](https://user-images.githubusercontent.com/100603074/223865168-433fcd56-12e9-44a2-83aa-1531d711383d.png)
 
 *Image used from https://gchq.github.io/CyberChef/*
+
+### [🔙](#tool-list)[PersistenceSniper](https://github.com/last-byte/PersistenceSniper)
+
+PersistenceSniper is a Powershell module that can be used by Blue Teams, Incident Responders and System Administrators to hunt persistences implanted in Windows machines.
+
+PersistenceSniper is able to detect a wide range of persistence techniques, the full list of which can be found [here](https://github.com/last-byte/PersistenceSniper/wiki/3-%E2%80%90-Detections).
+
+**Install: (PowerShell Gallery)**
+
+```bash
+Install-Module PersistenceSniper
+Import-Module PersistenceSniper
+```
+
+**Install: (GitHub)**
+
+Download the .zip from [GitHub](https://github.com/last-byte/PersistenceSniper/releases) and move it to the machine that you want to run the tool from.
+
+```bash
+Expand-Archive -Path .\PersistenceSniper-main.zip -Destination .\
+Import-Module .\PersistenceSniper-main\PersistenceSniper\PersistenceSniper.psd1
+```
+
+Full installation information can be found [here](https://github.com/last-byte/PersistenceSniper/wiki/1-%E2%80%90-Deployment).
+
+**Usage:**
+
+```bash
+# Run all persistence hunting techniques (Verbose Mode)
+Find-AllPersistence -Verbose
+
+# Run single persistence hunting technique
+Find-AllPersistence -PersistenceMethod RunAndRunOnce
+```
+
+Full usage information can be found [here](https://github.com/last-byte/PersistenceSniper/wiki/2-%E2%80%90-Usage).
+
+![image](https://github.com/user-attachments/assets/15f722c7-f4ca-4ef8-a5a5-fb132eb2b58a)
+
+*Image used from https://hackers-arise.com/powershell-for-dfir-part-2-finding-persistence/*
 
 Threat Intelligence
 ====================
@@ -1867,6 +1968,20 @@ Request a demo from [here](https://go.cofense.com/live-demo/).
 ![image](https://user-images.githubusercontent.com/100603074/210669120-1b29007a-f7f6-40f6-922b-9b5b251f6447.png)
 
 *Image used from https://cofense.com/product-services/phishme/*
+
+### [🔙](#tool-list)[kc7cyber](https://kc7cyber.com/)
+
+KC7 is a free, gamified cybersecurity training platform that allows users to act as digital detectives and investigate simulated cyber attacks.
+
+Hunt hackers, view real-world logs, and spot malicious activity without requiring any prior technical experience.
+
+Good for individuals new to the industry or on work placements.
+
+Access the [dashboard](https://kc7cyber.com/dashboard) select "Continue as Guest" and start playing.
+
+![image](https://github.com/user-attachments/assets/00f95f39-604f-4795-9e1a-d3473137c539)
+
+*Image used from https://kc7cyber.com/*
 
 Communication and Collaboration
 ====================
