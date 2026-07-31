@@ -63,10 +63,11 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>Security Monitoring</b> 11 tools</summary>
+    <summary><b>Security Monitoring</b> 12 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#sysmon">Sysmon</a></b><i> System Monitor for Windows</i></li>
+            <li><b><a href="#dll-injection-lab">DLL Injection Lab</a></b><i> Safe synthetic DLL-injection detection QA lab</i></li>
             <li><b><a href="#kibana">Kibana</a></b><i> Data visualization and exploration</i></li>
             <li><b><a href="#logstash">Logstash</a></b><i> Data collection and processing</i></li>
             <li><b><a href="#parsedmarc">parsedmarc</a></b><i> Email DMARC data visualisation</i></li>
@@ -600,6 +601,26 @@ The Microsoft documentation page can be found [here](https://learn.microsoft.com
 ![image](https://user-images.githubusercontent.com/100603074/210621009-b3c31c2b-f789-450a-acbf-7578fa943abd.png)
 
 *Image used from https://nsaneforums.com/topic/281207-sysmon-5-brings-registry-modification-logging/*
+
+### [🔙](#tool-list)[DLL Injection Lab](https://github.com/bsmensah-ctrl/DLL-Injection-Lab)
+
+DLL Injection Lab is a safe, deterministic QA harness for testing DLL-injection correlation logic without injecting a DLL or touching live processes. It generates a synthetic five-event chain, includes clean and incomplete controls, and exports JSON, Markdown, and SARIF findings mapped to MITRE ATT&CK T1055.001.
+
+**Install:**
+
+```bash
+git clone https://github.com/bsmensah-ctrl/DLL-Injection-Lab.git
+cd DLL-Injection-Lab
+python -m pip install -e .
+```
+
+**Usage:**
+
+```bash
+dll-injection-lab demo
+```
+
+The [browser demo](https://bsmensah-ctrl.github.io/DLL-Injection-Lab/) runs entirely client-side with no installation.
 
 ### [🔙](#tool-list)[Kibana](https://www.elastic.co/kibana/)
 
