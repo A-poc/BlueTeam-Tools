@@ -1249,6 +1249,7 @@ Visit the resource [here](https://github.com/center-for-threat-informed-defense/
 
 **Example (sandworm)**
 
+- [Darkmoon](https://github.com/ASCIT31/Dark-Moon) - Open source (GPL-3.0) autonomous AI penetration testing platform covering web, API, Active Directory and Kubernetes, with proof of exploitation.
 - [Sandworm Emulated Software Source Code](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/sandworm/Resources)
 - [Sandworm Detection Scenario Walkthrough](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/sandworm/Emulation_Plan/Scenario_1)
 - [Sandworm Intelligence Summary](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/sandworm/Intelligence_Summary/Intelligence_Summary.md)
