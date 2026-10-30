@@ -94,29 +94,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
 </details>
 
 <details open>
-    <summary><b>### [🔙](#tool-list)[OshoosiClaw](https://github.com/oyesanyf/OshoosiClaw)
-
-OshoosiClaw is a cross-platform Endpoint Detection & Response (EDR), Host IPS, and 7-Ring AI agent containment platform written in Rust with eBPF/ETW kernel sensors, YARA-X memory/file scanning, and Universal Binary/Bytecode inspection.
-
-Features:
-
-- Real-time kernel and user-mode telemetry across Windows (ETW, AMSI, Minifilter, AppContainer), Linux (eBPF, seccomp-bpf, Landlock v3), and macOS
-- Multi-voter Bayesian behavioral consensus and YARA-X scanning with 1,600+ detection signatures
-- Autonomous Reverse Engineer Anything (REA) engine for PE, ELF, Mach-O, WASM, EVM bytecode, .NET CIL, and Android APKs
-- Tamper-evident BLAKE3 + Post-Quantum (ML-DSA-65) Merkle audit logging and automated quarantine rollback
-
-**Install:**
-
-Download the binary or MSI/DEB/RPM package from the [release page](https://github.com/oyesanyf/OshoosiClaw/releases).
-
-**Usage:**
-
-```
-osoosi --config config/osoosi.toml
-```
-
----
-Threat Tools and Techniques</b> 12 tools</summary>
+    <summary><b>Threat Tools and Techniques</b> 12 tools</summary>
     <ul>
         <ul>
             <li><b><a href="#lolbas-projectgithubio">lolbas-project.github.io</a></b><i> Living Off The Land Windows Binaries</i></li>
@@ -940,6 +918,28 @@ Full usage information and examples can be found [here](https://docs.canarytoken
 
 *Image used from https://canarytokens.org/nest/*
 
+### [🔙](#tool-list)[OshoosiClaw](https://github.com/oyesanyf/OshoosiClaw)
+
+OshoosiClaw is a cross-platform Endpoint Detection & Response (EDR), Host IPS, and 7-Ring AI agent containment platform written in Rust with eBPF/ETW kernel sensors, YARA-X memory/file scanning, and Universal Binary/Bytecode inspection.
+
+Features:
+
+- Real-time kernel and user-mode telemetry across Windows (ETW, AMSI, Minifilter, AppContainer), Linux (eBPF, seccomp-bpf, Landlock v3), and macOS
+- Multi-voter Bayesian behavioral consensus and YARA-X scanning with 1,600+ detection signatures
+- Autonomous Reverse Engineer Anything (REA) engine for PE, ELF, Mach-O, WASM, EVM bytecode, .NET CIL, and Android APKs
+- Tamper-evident BLAKE3 + Post-Quantum (ML-DSA-65) Merkle audit logging and automated quarantine rollback
+
+**Install:**
+
+Download the binary or MSI/DEB/RPM package from the [release page](https://github.com/oyesanyf/OshoosiClaw/releases).
+
+**Usage:**
+
+```
+osoosi --config config/osoosi.toml
+```
+
+---
 Threat Tools and Techniques
 ====================
 
