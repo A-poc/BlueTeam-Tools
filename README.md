@@ -88,6 +88,7 @@ Some of the tools may be specifically designed for blue teaming, while others ar
             <li><b><a href="#velociraptor">velociraptor</a></b><i> Endpoint visibility and collection tool</i></li>
             <li><b><a href="#sysmonsearch">SysmonSearch</a></b><i> Sysmon event log visualisation</i></li>
             <li><b><a href="#canary-tokens">Canary Tokens</a></b><i> Deception honeypot documents</i></li>
+            <li><b><a href="#oshoosiclaw">OshoosiClaw</a></b><i> Cross-platform Rust EDR, Host IPS, and AI agent containment platform</i></li>
         </ul>
     </ul>
 </details>
@@ -921,6 +922,27 @@ Threat Tools and Techniques
 ====================
 
 *Tools for identifying and implementing detections against TTPs used by threat actors.*
+
+### [🔙](#tool-list)[OshoosiClaw](https://github.com/oyesanyf/OshoosiClaw)
+
+OshoosiClaw is a cross-platform Endpoint Detection & Response (EDR), Host IPS, and 7-Ring AI agent containment platform written in Rust with eBPF/ETW kernel sensors, YARA-X memory/file scanning, and Universal Binary/Bytecode inspection.
+
+Features:
+
+- Real-time kernel and user-mode telemetry across Windows (ETW, AMSI, Minifilter, AppContainer), Linux (eBPF, seccomp-bpf, Landlock v3), and macOS
+- Multi-voter Bayesian behavioral consensus and YARA-X scanning with 1,600+ detection signatures
+- Autonomous Reverse Engineer Anything (REA) engine for PE, ELF, Mach-O, WASM, EVM bytecode, .NET CIL, and Android APKs
+- Tamper-evident BLAKE3 + Post-Quantum (ML-DSA-65) Merkle audit logging and automated quarantine rollback
+
+**Install:**
+
+Download the binary or MSI/DEB/RPM package from the [release page](https://github.com/oyesanyf/OshoosiClaw/releases).
+
+**Usage:**
+
+```
+osoosi --config config/osoosi.toml
+```
 
 ### [🔙](#tool-list)[lolbas-project.github.io](https://lolbas-project.github.io/)
 
